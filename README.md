@@ -2,18 +2,20 @@
 
 What is Nightmare Tower?  
 This is a modification for Serious Sam Classic The First Encounter.  
-The nightmare tower. A fan-made addition to the game containing three levels and released in 2001.  
+The nightmare tower. A fan-made addition to the game containing three levels and released in 2001. 
 It received the status of a cult as it was published on CDs in the CIS countries.  
-It is based on the library from the Serious Sam++ modification from Elad 'Aircars Iirion Claus' Amir.  
+It is based on the library from the Serious Sam++ modification from Elad 'Aircars Iirion Claus' Amir. 
 This mod required [https://gitflic.ru/project/tx00100xt/serioussamclassic] to run.  
 Nightmare Tower was created by fans of the game Serious Sam Classic and is distributed for free.    
 
 Author:  
 Leonid Kolesnichenko is author this mod for windows.  
 
-![OW1](https://gitflic.ru/project/tx00100xt/se1-tfe-oddworld/blob/raw?file=Images%2Foddworld-1.png&commit=2ff73ec1f5b8c2cad8ec8738412f9e4012586d0a)
+![TW1](https://gitflic.ru/project/tx00100xt/se1-tfe-tower/blob/raw?file=Images%2Ftower-1.png&commit=8c9e6f03a737e936a13d856382f197f4664f4d83)
 
-![OW2](https://gitflic.ru/project/tx00100xt/se1-tfe-oddworld/blob/raw?file=Images%2Foddworld-2.png&commit=2ff73ec1f5b8c2cad8ec8738412f9e4012586d0a)
+![TW2](https://gitflic.ru/project/tx00100xt/se1-tfe-tower/blob/raw?file=Images%2Ftower-2.png&commit=8c9e6f03a737e936a13d856382f197f4664f4d83)
+
+![TW3](https://gitflic.ru/project/tx00100xt/se1-tfe-tower/blob/raw?file=Images%2Ftower-3.png&commit=8c9e6f03a737e936a13d856382f197f4664f4d83)
 
 
 Download [SamTFE-Tower.tar.xz] archive and unpack to  SeriousSamClassic/SamTFE/ directory.  
