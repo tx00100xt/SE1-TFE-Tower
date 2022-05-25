@@ -5,17 +5,17 @@ This is a modification for Serious Sam Classic The First Encounter.
 The nightmare tower. A fan-made addition to the game containing three levels and released in 2001. 
 It received the status of a cult as it was published on CDs in the CIS countries.  
 It is based on the library from the Serious Sam++ modification from Elad 'Aircars Iirion Claus' Amir. 
-This mod required [https://gitflic.ru/project/tx00100xt/serioussamclassic] to run.  
+This mod required https://github.com/tx00100xt/SeriousSamClassic to run.  
 Nightmare Tower was created by fans of the game Serious Sam Classic and is distributed for free.    
 
 Author:  
 Leonid Kolesnichenko is author this mod for windows.  
 
-![TW1](https://gitflic.ru/project/tx00100xt/se1-tfe-tower/blob/raw?file=Images%2Ftower-1.png&commit=8c9e6f03a737e936a13d856382f197f4664f4d83)
+![TW1](https://raw.githubusercontent.com/tx00100xt/SE1-TFE-Tower/main/Images/tower-1.png)
 
-![TW2](https://gitflic.ru/project/tx00100xt/se1-tfe-tower/blob/raw?file=Images%2Ftower-2.png&commit=8c9e6f03a737e936a13d856382f197f4664f4d83)
+![TW2](https://raw.githubusercontent.com/tx00100xt/SE1-TFE-Tower/main/Images/tower-2.png)
 
-![TW3](https://gitflic.ru/project/tx00100xt/se1-tfe-tower/blob/raw?file=Images%2Ftower-3.png&commit=8c9e6f03a737e936a13d856382f197f4664f4d83)
+![TW3](https://raw.githubusercontent.com/tx00100xt/SE1-TFE-Tower/main/Images/tower-3.png)
 
 
 Download [SamTFE-Tower.tar.xz] archive and unpack to  SeriousSamClassic/SamTFE/ directory.  
@@ -26,7 +26,7 @@ To start the modification, use the game menu - item Modification.
 Type this in your terminal:
 
 ```
-git clone https://gitflic.ru/project/tx00100xt/se1-tfe-tower.git SE1-TFE-Tower
+git clone https://github.com/tx00100xt/SE1-TFE-Tower.git SE1-TFE-Tower
 cd SE1-TFE-Tower/Sources
 ./build-linux64.sh -DTFE=TRUE             # use build-linux32.sh for 32-bits
 ```
@@ -40,4 +40,3 @@ License
 
 
 [SamTFE-Tower.tar.xz]: https://drive.google.com/file/d/1-29nvJBlHDq9eOy1vEWX3tlgmyFDoYZP/view?usp=sharing "Serious Sam Classic The Nightmare Tower"
-[https://gitflic.ru/project/tx00100xt/serioussamclassic]: https://gitflic.ru/project/tx00100xt/serioussamclassic
