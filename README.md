@@ -2,9 +2,9 @@
 
 What is Nightmare Tower?  
 This is a modification for Serious Sam Classic The First Encounter.  
-The nightmare tower. A fan-made addition to the game containing three levels and released in 2001. 
+The nightmare tower. A fan-made addition to the game containing three levels and released in 2001.  
 It received the status of a cult as it was published on CDs in the CIS countries.  
-It is based on the library from the Serious Sam++ modification from Elad 'Aircars Iirion Claus' Amir. 
+It is based on the library from the Serious Sam++ modification from Elad 'Aircars Iirion Claus' Amir.  
 This mod required https://github.com/tx00100xt/SeriousSamClassic to run.  
 Nightmare Tower was created by fans of the game Serious Sam Classic and is distributed for free.    
 
