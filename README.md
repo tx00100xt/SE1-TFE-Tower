@@ -33,6 +33,12 @@ cd SE1-TFE-Tower/Sources
 After that , libraries will be collected in the x32 or x64 directory .  
 Copy them to SeriousSamClassic/SamTFE/Mods/Tower/Bin folder.
 
+### Suported OS
+linux
+
+### Other OS
+Not supported
+
 License
 -------
 
