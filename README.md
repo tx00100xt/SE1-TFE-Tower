@@ -82,7 +82,7 @@ brew install bison flex sdl2 libogg libvorbis zlib-ng cmake git
 Type this in your terminal:
 ```
 git clone https://github.com/tx00100xt/SE1-TFE-Tower.git
-cd SeriousSamAlphaRemake/Sources
+cd SE1-TFE-Tower/Sources
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DTFE=TRUE ..
