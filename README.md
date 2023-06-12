@@ -93,7 +93,6 @@ After that , libraries will be collected in the Mods directory.
 Copy them to SeriousSamClassic/SamTFE/Mods/Tower/Bin folder.
 
 Windows
-Windows
 -------
 * This project can be compiled starting from Windows 7 and higher.
 
