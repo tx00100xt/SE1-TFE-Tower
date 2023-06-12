@@ -36,11 +36,11 @@ Building Serious Sam Classic The Nightmare Tower modification (only for SS:TFE)
 Type this in your terminal:
 
 ```
-git clone https://github.com/tx00100xt/SE1-TFE-Tower.git SE1-TFE-Tower
+git clone https://github.com/tx00100xt/SE1-TFE-Tower.git
 cd SE1-TFE-Tower/Sources
-./build-linux64.sh -DTFE=TRUE	# use build-linux32.sh for 32-bits
+./build-linux64.sh                   	# use build-linux32.sh for 32-bits
 ```
-After that , libraries will be collected in the x32 or x64 directory .  
+After that , libraries will be collected in the Mods directory.  
 Copy them to SeriousSamClassic/SamTFE/Mods/Tower/Bin folder.
 
 ### Gentoo
@@ -56,8 +56,9 @@ To build a game under Arch Linux you can use the package from AUR: https://aur.a
 The build for raspberry pi is similar to the build for Linux, you just need to add an additional build key.
 
 ```
+git clone https://github.com/tx00100xt/SE1-TFE-Tower.git
 cd SE1-TFE-Tower/Sources
-./build-linux64.sh -DTFE=TRUE -DRPI4=TRUE	# use build-linux32.sh for 32-bits
+./build-linux64.sh -DRPI4=TRUE	        # use build-linux32.sh for 32-bits
 ```
 ### FreeBSD
 
@@ -65,13 +66,33 @@ Install bash.
 Type this in your terminal:
 
 ```
-git clone https://github.com/tx00100xt/SE1-TFE-Tower.git SE1-TFE-Tower
+git clone https://github.com/tx00100xt/SE1-TFE-Tower.git
 cd SE1-TFE-Tower/Sources
-bash build-linux64.sh -DTFE=TRUE	# use build-linux32.sh for 32-bits
+bash build-linux64.sh 	                # use build-linux32.sh for 32-bits
 ```
-After that , libraries will be collected in the x32 or x64 directory .  
+After that , libraries will be collected in the Mods directory.  
 Copy them to SeriousSamClassic/SamTFE/Mods/Tower/Bin folder.
 
+### macOS
+
+Install dependes
+```
+brew install bison flex sdl2 libogg libvorbis zlib-ng cmake git
+```
+Type this in your terminal:
+```
+git clone https://github.com/tx00100xt/SE1-TFE-Tower.git
+cd SeriousSamAlphaRemake/Sources
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DTFE=TRUE ..
+make -j4
+make install
+```
+After that , libraries will be collected in the Mods directory.   
+Copy them to SeriousSamClassic/SamTFE/Mods/Tower/Bin folder.
+
+Windows
 Windows
 -------
 * This project can be compiled starting from Windows 7 and higher.
@@ -92,11 +113,12 @@ Supported OS
 * `FreeBSD`
 * `Windows`
 * `Raspberry PI OS`
+* `macOS`
 
 ### Build status
 |CI|Platform|Compiler|Configurations|Platforms|Status|
 |---|---|---|---|---|---|
-|GitHub Actions|Windows, Ubuntu, FreeBSD, Alpine, Raspberry PI OS Lite|MSVC, GCC, Clang|Release|x86, x64, armv7l, aarch64|![GitHub Actions Build Status](https://github.com/tx00100xt/SE1-TFE-Tower/actions/workflows/cibuild.yml/badge.svg)
+|GitHub Actions|Windows, Ubuntu, FreeBSD, Alpine, Raspberry PI OS Lite, macOS|MSVC, GCC, Clang|Release|x86, x64, armv7l, aarch64, riscv64, ppc64le, s390x|![GitHub Actions Build Status](https://github.com/tx00100xt/SE1-TFE-Tower/actions/workflows/cibuild.yml/badge.svg)
 
 You can download a the automatically build based on the latest commit.  
 To do this, go to the [Actions tab], select the top workflows, and then Artifacts.

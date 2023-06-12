@@ -1,0 +1,888 @@
+ Ecc
+
+ Timestamp is 63a805c3 (Sun Dec 25 11:11:47 2022)
+
+ Preferred load address is 00400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000030H .text$di                CODE
+ 0001:00000030 0000ce28H .text$mn                CODE
+ 0002:00000000 0000013cH .idata$5                DATA
+ 0002:0000013c 00000004H .00cfg                  DATA
+ 0002:00000140 00000004H .CRT$XCA                DATA
+ 0002:00000144 00000004H .CRT$XCAA               DATA
+ 0002:00000148 00000004H .CRT$XCU                DATA
+ 0002:0000014c 00000004H .CRT$XCZ                DATA
+ 0002:00000150 00000004H .CRT$XIA                DATA
+ 0002:00000154 00000004H .CRT$XIAA               DATA
+ 0002:00000158 00000004H .CRT$XIAC               DATA
+ 0002:0000015c 00000004H .CRT$XIZ                DATA
+ 0002:00000160 00000004H .CRT$XPA                DATA
+ 0002:00000164 00000004H .CRT$XPZ                DATA
+ 0002:00000168 00000004H .CRT$XTA                DATA
+ 0002:0000016c 00000004H .CRT$XTZ                DATA
+ 0002:00000170 00007bb0H .rdata                  DATA
+ 0002:00007d20 00000004H .rdata$sxdata           DATA
+ 0002:00007d24 00000304H .rdata$zzzdbg           DATA
+ 0002:00008028 00000004H .rtc$IAA                DATA
+ 0002:0000802c 00000004H .rtc$IZZ                DATA
+ 0002:00008030 00000004H .rtc$TAA                DATA
+ 0002:00008034 00000004H .rtc$TZZ                DATA
+ 0002:00008038 0000003cH .xdata$x                DATA
+ 0002:00008074 00000000H .edata                  DATA
+ 0002:00008074 000000c8H .idata$2                DATA
+ 0002:0000813c 00000014H .idata$3                DATA
+ 0002:00008150 0000013cH .idata$4                DATA
+ 0002:0000828c 000005d2H .idata$6                DATA
+ 0003:00000000 00000038H .data                   DATA
+ 0003:00000038 00000eacH .bss                    DATA
+ 0004:00000000 00000024H .gfids$y                DATA
+ 0005:00000000 00000060H .rsrc$01                DATA
+ 0005:00000060 00000180H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___guard_fids_table        00000000     <absolute>
+ 0000:00000000       ___guard_fids_count        00000000     <absolute>
+ 0000:00000000       ___guard_iat_count         00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_count     00000000     <absolute>
+ 0000:00000000       ___dynamic_value_reloc_table 00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_table     00000000     <absolute>
+ 0000:00000000       ___guard_iat_table         00000000     <absolute>
+ 0000:00000001       ___safe_se_handler_count   00000001     <absolute>
+ 0000:00000100       ___guard_flags             00000100     <absolute>
+ 0000:00000000       ___ImageBase               00400000     <linker-defined>
+ 0001:00000030       ?yyerror@@YAXPBD@Z         00401030 f   Main.obj
+ 0001:00000070       ??HSType@@QAE?AU0@ABU0@@Z  00401070 f   Main.obj
+ 0001:000000e0       _yywrap                    004010e0 f   Main.obj
+ 0001:000000f0       ?stradd@@YAPADPAD0@Z       004010f0 f   Main.obj
+ 0001:00000170       ?stradd@@YAPADPAD00@Z      00401170 f   Main.obj
+ 0001:00000240       ?LineDirective@@YAPADH@Z   00401240 f   Main.obj
+ 0001:00000290       ?ChangeFileNameExtension@@YAPADPBD0@Z 00401290 f   Main.obj
+ 0001:00000320       ?FOpen@@YAPAU_iobuf@@PBD0@Z 00401320 f   Main.obj
+ 0001:00000370       ?TranslateBackSlashes@@YAXPAD@Z 00401370 f   Main.obj
+ 0001:000003a0       ?ReplaceFileRL@@YAXPBD0@Z  004013a0 f   Main.obj
+ 0001:00000600       ?ReplaceFile@@YAXPBD0@Z    00401600 f   Main.obj
+ 0001:00000630       ?ReplaceIfChanged@@YAXPBD0@Z 00401630 f   Main.obj
+ 0001:00000850       _main                      00401850 f   Main.obj
+ 0001:00000af0       ??$__vcrt_va_start_verify_argument_type@QBD@@YAXXZ 00401af0 f i Main.obj
+ 0001:00000b40       ___local_stdio_printf_options 00401b40 f i Main.obj
+ 0001:00000b50       _fprintf                   00401b50 f i Main.obj
+ 0001:00000b80       _printf                    00401b80 f i Main.obj
+ 0001:00000bb0       _sprintf                   00401bb0 f i Main.obj
+ 0001:00000c30       ?yyparse@@YAHXZ            00401c30 f   Parser.obj
+ 0001:00006100       ?OpenBrace@@YAXXZ          00407100 f   Parser.obj
+ 0001:00006110       ?CloseBrace@@YAXXZ         00407110 f   Parser.obj
+ 0001:00006120       ?Braces@@YA?AUSType@@H@Z   00407120 f   Parser.obj
+ 0001:00006170       ?RemoveLineDirective@@YAPADPAD@Z 00407170 f   Parser.obj
+ 0001:000061a0       ?GetLineDirective@@YAPBDAAUSType@@@Z 004071a0 f   Parser.obj
+ 0001:000061f0       ?AddHandlerFunction@@YAXPADH@Z 004071f0 f   Parser.obj
+ 0001:00006230       ?AddHandlerFunction@@YAXPAD00@Z 00407230 f   Parser.obj
+ 0001:000062a0       ?CreateInternalHandlerFunction@@YAXPAD0@Z 004072a0 f   Parser.obj
+ 0001:000062f0       ?DeclareFeatureProperties@@YAXXZ 004072f0 f   Parser.obj
+ 0001:00006370       ??0SType@@QAE@PBD@Z        00407370 f i Parser.obj
+ 0001:000063a0       ??0SType@@QAE@XZ           004073a0 f i Parser.obj
+ 0001:000063d0       ??4SType@@QAEABU0@ABU0@@Z  004073d0 f i Parser.obj
+ 0001:00006400       ??4SType@@QAEABU0@PBD@Z    00407400 f i Parser.obj
+ 0001:00006430       ??_H@YGXPAXIIP6EPAX0@Z@Z   00407430 f i Parser.obj
+ 0001:00006490       ___local_stdio_scanf_options 00407490 f i Parser.obj
+ 0001:000064a0       _sscanf                    004074a0 f i Parser.obj
+ 0001:00006500       ?yyrestart@@YAXPAU_iobuf@@@Z 00407500 f   Scanner.obj
+ 0001:00006540       ?yy_switch_to_buffer@@YAXPAUyy_buffer_state@@@Z 00407540 f   Scanner.obj
+ 0001:00006590       ?yy_load_buffer_state@@YAXXZ 00407590 f   Scanner.obj
+ 0001:000065c0       ?yy_create_buffer@@YAPAUyy_buffer_state@@PAU_iobuf@@H@Z 004075c0 f   Scanner.obj
+ 0001:00006620       ?yy_delete_buffer@@YAXPAUyy_buffer_state@@@Z 00407620 f   Scanner.obj
+ 0001:00006660       ?yy_init_buffer@@YAXPAUyy_buffer_state@@PAU_iobuf@@@Z 00407660 f   Scanner.obj
+ 0001:00006690       ?yy_flush_buffer@@YAXPAUyy_buffer_state@@@Z 00407690 f   Scanner.obj
+ 0001:000066d0       ?yy_scan_buffer@@YAPAUyy_buffer_state@@PADI@Z 004076d0 f   Scanner.obj
+ 0001:00006760       ?yy_scan_string@@YAPAUyy_buffer_state@@PBD@Z 00407760 f   Scanner.obj
+ 0001:00006790       ?yy_scan_bytes@@YAPAUyy_buffer_state@@PBDH@Z 00407790 f   Scanner.obj
+ 0001:00006810       ?yylex@@YAHXZ              00407810 f   Scanner.obj
+ 0001:0000bd16       @__security_check_cookie@4 0040cd16 f   MSVCRT:_secchk_.obj
+ 0001:0000bd30       __alloca_probe             0040cd30 f   MSVCRT:chkstk.obj
+ 0001:0000bd30       __chkstk                   0040cd30 f   MSVCRT:chkstk.obj
+ 0001:0000bd5d       ___raise_securityfailure   0040cd5d f   MSVCRT:gs_report.obj
+ 0001:0000bd85       ___report_gsfailure        0040cd85 f   MSVCRT:gs_report.obj
+ 0001:0000be80       ___report_rangecheckfailure 0040ce80 f   MSVCRT:gs_report.obj
+ 0001:0000be8c       ___report_securityfailure  0040ce8c f   MSVCRT:gs_report.obj
+ 0001:0000bf5f       ___report_securityfailureEx 0040cf5f f   MSVCRT:gs_report.obj
+ 0001:0000c080       __alloca_probe_16          0040d080 f   MSVCRT:alloca16.obj
+ 0001:0000c096       __alloca_probe_8           0040d096     MSVCRT:alloca16.obj
+ 0001:0000c2e3       ?configure_argv@__scrt_narrow_argv_policy@@SAHXZ 0040d2e3 f i MSVCRT:exe_main.obj
+ 0001:0000c2f0       ?get_app_type@__scrt_main_policy@@SA?AW4_crt_app_type@@XZ 0040d2f0 f i MSVCRT:exe_main.obj
+ 0001:0000c31e       _mainCRTStartup            0040d31e f   MSVCRT:exe_main.obj
+ 0001:0000c328       ??$__crt_fast_decode_pointer@PAP6AXXZ@@YAPAP6AXXZQAP6AXXZ@Z 0040d328 f i MSVCRT:utility.obj
+ 0001:0000c33c       ??$__crt_fast_encode_pointer@PAP6AXXZ@@YAPAP6AXXZQAP6AXXZ@Z 0040d33c f i MSVCRT:utility.obj
+ 0001:0000c359       ?__crt_rotate_pointer_value@@YAIIH@Z 0040d359 f i MSVCRT:utility.obj
+ 0001:0000c3dd       _NtCurrentTeb              0040d3dd f i MSVCRT:utility.obj
+ 0001:0000c3e4       ___scrt_acquire_startup_lock 0040d3e4 f   MSVCRT:utility.obj
+ 0001:0000c419       ___scrt_dllmain_after_initialize_c 0040d419 f   MSVCRT:utility.obj
+ 0001:0000c444       ___scrt_dllmain_before_initialize_c 0040d444 f   MSVCRT:utility.obj
+ 0001:0000c452       ___scrt_dllmain_crt_thread_attach 0040d452 f   MSVCRT:utility.obj
+ 0001:0000c471       ___scrt_dllmain_crt_thread_detach 0040d471 f   MSVCRT:utility.obj
+ 0001:0000c47e       ___scrt_dllmain_exception_filter 0040d47e f   MSVCRT:utility.obj
+ 0001:0000c4b1       ___scrt_dllmain_uninitialize_c 0040d4b1 f   MSVCRT:utility.obj
+ 0001:0000c4d4       ___scrt_dllmain_uninitialize_critical 0040d4d4 f   MSVCRT:utility.obj
+ 0001:0000c4e1       ___scrt_initialize_crt     0040d4e1 f   MSVCRT:utility.obj
+ 0001:0000c51a       ___scrt_initialize_onexit_tables 0040d51a f   MSVCRT:utility.obj
+ 0001:0000c5b1       ___scrt_is_nonwritable_in_current_image 0040d5b1 f   MSVCRT:utility.obj
+ 0001:0000c63b       ___scrt_release_startup_lock 0040d63b f   MSVCRT:utility.obj
+ 0001:0000c658       ___scrt_uninitialize_crt   0040d658 f   MSVCRT:utility.obj
+ 0001:0000c680       __onexit                   0040d680 f   MSVCRT:utility.obj
+ 0001:0000c6bb       _at_quick_exit             0040d6bb f   MSVCRT:utility.obj
+ 0001:0000c6ec       _atexit                    0040d6ec f   MSVCRT:utility.obj
+ 0001:0000c701       ___security_init_cookie    0040d701 f   MSVCRT:gs_support.obj
+ 0001:0000c79d       __matherr                  0040d79d f   MSVCRT:matherr.obj
+ 0001:0000c7a0       __get_startup_argv_mode    0040d7a0 f   MSVCRT:argv_mode.obj
+ 0001:0000c7a4       __get_startup_commit_mode  0040d7a4 f   MSVCRT:commit_mode.obj
+ 0001:0000c7a7       __get_startup_file_mode    0040d7a7 f   MSVCRT:file_mode.obj
+ 0001:0000c7ad       __get_startup_new_mode     0040d7ad f   MSVCRT:new_mode.obj
+ 0001:0000c7b0       __get_startup_thread_locale_mode 0040d7b0 f   MSVCRT:thread_locale.obj
+ 0001:0000c7b3       ?__scrt_initialize_type_info@@YAXXZ 0040d7b3 f   MSVCRT:tncleanup.obj
+ 0001:0000c7bf       ?__scrt_uninitialize_type_info@@YAXXZ 0040d7bf f   MSVCRT:tncleanup.obj
+ 0001:0000c7cb       __should_initialize_environment 0040d7cb f   MSVCRT:env_mode.obj
+ 0001:0000c7ce       __initialize_default_precision 0040d7ce f   MSVCRT:default_precision.obj
+ 0001:0000c7ef       __initialize_invalid_parameter_handler 0040d7ef f   MSVCRT:invalid_parameter_handler.obj
+ 0001:0000c7f0       __initialize_denormal_control 0040d7f0 f   MSVCRT:denormal_control.obj
+ 0001:0000c7f1       ___scrt_initialize_default_local_stdio_options 0040d7f1 f   MSVCRT:default_local_stdio_options.obj
+ 0001:0000c80e       ___scrt_is_user_matherr_present 0040d80e f   MSVCRT:matherr_detection.obj
+ 0001:0000c81a       ___scrt_get_dyn_tls_init_callback 0040d81a f   MSVCRT:dyn_tls_init.obj
+ 0001:0000c820       ___scrt_get_dyn_tls_dtor_callback 0040d820 f   MSVCRT:dyn_tls_dtor.obj
+ 0001:0000c826       ___scrt_fastfail           0040d826 f   MSVCRT:utility_desktop.obj
+ 0001:0000c941       ___scrt_get_show_window_mode 0040d941 f   MSVCRT:utility_desktop.obj
+ 0001:0000c974       ___scrt_initialize_winrt   0040d974 f   MSVCRT:utility_desktop.obj
+ 0001:0000c977       ___scrt_is_managed_app     0040d977 f   MSVCRT:utility_desktop.obj
+ 0001:0000c9bb       ___scrt_set_unhandled_exception_filter 0040d9bb f   MSVCRT:utility_desktop.obj
+ 0001:0000c9c7       ___scrt_unhandled_exception_filter@4 0040d9c7 f   MSVCRT:utility_desktop.obj
+ 0001:0000ca08       __crt_debugger_hook        0040da08 f   MSVCRT:utility_desktop.obj
+ 0001:0000ca10       __RTC_Initialize           0040da10 f   MSVCRT:_initsect_.obj
+ 0001:0000ca3b       __RTC_Terminate            0040da3b f   MSVCRT:_initsect_.obj
+ 0001:0000ca66       @_guard_check_icall@4      0040da66 f i MSVCRT:checkcfg.obj
+ 0001:0000ca70       __SEH_prolog4              0040da70 f   MSVCRT:_sehprolg4_.obj
+ 0001:0000cab6       __SEH_epilog4              0040dab6 f   MSVCRT:_sehprolg4_.obj
+ 0001:0000cacb       __except_handler4          0040dacb f   MSVCRT:_chandler4gs_.obj
+ 0001:0000caee       ___isa_available_init      0040daee f   MSVCRT:_cpu_disp_.obj
+ 0001:0000cc88       ___scrt_is_ucrt_dll_in_use 0040dc88 f   MSVCRT:ucrt_detection.obj
+ 0001:0000cc94       @_guard_check_icall_nop@4  0040dc94 f i MSVCRT:guard_support.obj
+ 0001:0000cc95       __guard_icall_checks_enforced 0040dc95 f i MSVCRT:guard_support.obj
+ 0001:0000cca8       _strchr                    0040dca8 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000ccae       _strrchr                   0040dcae f   vcruntime:VCRUNTIME140.dll
+ 0001:0000ccb4       _memset                    0040dcb4 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000ccba       ___std_type_info_destroy_list 0040dcba f   vcruntime:VCRUNTIME140.dll
+ 0001:0000ccc0       __except_handler4_common   0040dcc0 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000ccc6       ___acrt_iob_func           0040dcc6 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cccc       _fclose                    0040dccc f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000ccd2       _feof                      0040dcd2 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000ccd8       _fgets                     0040dcd8 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000ccde       _fopen                     0040dcde f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cce4       _fread                     0040dce4 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000ccea       _fseek                     0040dcea f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000ccf0       _fwrite                    0040dcf0 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000ccf6       _remove                    0040dcf6 f   ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0001:0000ccfc       _rename                    0040dcfc f   ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0001:0000cd02       ___stdio_common_vfprintf   0040dd02 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cd08       ___stdio_common_vsprintf   0040dd08 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cd0e       _malloc                    0040dd0e f   ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0001:0000cd14       __errno                    0040dd14 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd1a       _exit                      0040dd1a f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd20       __fullpath                 0040dd20 f   ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0001:0000cd26       _strerror                  0040dd26 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd2c       _strncmp                   0040dd2c f   ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0001:0000cd32       ___stdio_common_vsscanf    0040dd32 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cd38       _atoi                      0040dd38 f   ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0001:0000cd3e       _ferror                    0040dd3e f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cd44       _getc                      0040dd44 f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cd4a       _free                      0040dd4a f   ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0001:0000cd50       _realloc                   0040dd50 f   ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0001:0000cd56       __seh_filter_exe           0040dd56 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd5c       __set_app_type             0040dd5c f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd62       ___setusermatherr          0040dd62 f   ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0001:0000cd68       __configure_narrow_argv    0040dd68 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd6e       __initialize_narrow_environment 0040dd6e f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd74       __get_initial_narrow_environment 0040dd74 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd7a       __initterm                 0040dd7a f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd80       __initterm_e               0040dd80 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd86       __exit                     0040dd86 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd8c       __set_fmode                0040dd8c f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cd92       ___p___argc                0040dd92 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd98       ___p___argv                0040dd98 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cd9e       __cexit                    0040dd9e f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cda4       __c_exit                   0040dda4 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdaa       __register_thread_local_exe_atexit_callback 0040ddaa f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdb0       __configthreadlocale       0040ddb0 f   ucrt:api-ms-win-crt-locale-l1-1-0.dll
+ 0001:0000cdb6       __set_new_mode             0040ddb6 f   ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0001:0000cdbc       ___p__commode              0040ddbc f   ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:0000cdc2       __seh_filter_dll           0040ddc2 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdc8       __initialize_onexit_table  0040ddc8 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdce       __register_onexit_function 0040ddce f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdd4       __execute_onexit_table     0040ddd4 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdda       __crt_atexit               0040ddda f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cde0       __crt_at_quick_exit        0040dde0 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cde6       __controlfp_s              0040dde6 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdec       _terminate                 0040ddec f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000cdf2       __strdup                   0040ddf2 f   ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0001:0000cdf8       _UnhandledExceptionFilter@4 0040ddf8 f   kernel32:KERNEL32.dll
+ 0001:0000cdfe       _SetUnhandledExceptionFilter@4 0040ddfe f   kernel32:KERNEL32.dll
+ 0001:0000ce04       _GetCurrentProcess@0       0040de04 f   kernel32:KERNEL32.dll
+ 0001:0000ce0a       _TerminateProcess@8        0040de0a f   kernel32:KERNEL32.dll
+ 0001:0000ce10       _IsProcessorFeaturePresent@4 0040de10 f   kernel32:KERNEL32.dll
+ 0001:0000ce16       _QueryPerformanceCounter@4 0040de16 f   kernel32:KERNEL32.dll
+ 0001:0000ce1c       _GetCurrentProcessId@0     0040de1c f   kernel32:KERNEL32.dll
+ 0001:0000ce22       _GetCurrentThreadId@0      0040de22 f   kernel32:KERNEL32.dll
+ 0001:0000ce28       _GetSystemTimeAsFileTime@4 0040de28 f   kernel32:KERNEL32.dll
+ 0001:0000ce2e       _InitializeSListHead@4     0040de2e f   kernel32:KERNEL32.dll
+ 0001:0000ce34       _IsDebuggerPresent@0       0040de34 f   kernel32:KERNEL32.dll
+ 0001:0000ce3a       _GetStartupInfoW@4         0040de3a f   kernel32:KERNEL32.dll
+ 0001:0000ce40       _GetModuleHandleW@4        0040de40 f   kernel32:KERNEL32.dll
+ 0001:0000ce46       ___scrt_stub_for_acrt_initialize 0040de46 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce46       ___vcrt_initialize         0040de46 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce46       ___acrt_initialize         0040de46 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce49       ___acrt_thread_attach      0040de49 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce49       ___vcrt_thread_attach      0040de49 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce49       ___scrt_stub_for_acrt_thread_attach 0040de49 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce4c       ___acrt_thread_detach      0040de4c f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce4c       ___scrt_stub_for_acrt_thread_detach 0040de4c f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce4c       ___vcrt_thread_detach      0040de4c f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce4f       ___vcrt_uninitialize       0040de4f f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce4f       ___acrt_uninitialize       0040de4f f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce4f       ___scrt_stub_for_acrt_uninitialize 0040de4f f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce52       ___acrt_uninitialize_critical 0040de52 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce52       ___scrt_stub_for_acrt_uninitialize_critical 0040de52 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce52       ___vcrt_uninitialize_critical 0040de52 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce55       ___scrt_stub_for_is_c_termination_complete 0040de55 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000ce55       __is_c_termination_complete 0040de55 f   MSVCRT:ucrt_stubs.obj
+ 0002:00000000       __imp__SetUnhandledExceptionFilter@4 0040e000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__GetCurrentProcess@0 0040e004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__TerminateProcess@8  0040e008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__IsProcessorFeaturePresent@4 0040e00c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__QueryPerformanceCounter@4 0040e010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__GetModuleHandleW@4  0040e014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__GetStartupInfoW@4   0040e018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__IsDebuggerPresent@0 0040e01c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__InitializeSListHead@4 0040e020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__GetSystemTimeAsFileTime@4 0040e024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__GetCurrentThreadId@0 0040e028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__GetCurrentProcessId@0 0040e02c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__UnhandledExceptionFilter@4 0040e030     kernel32:KERNEL32.dll
+ 0002:00000034       \177KERNEL32_NULL_THUNK_DATA 0040e034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp____std_type_info_destroy_list 0040e038     vcruntime:VCRUNTIME140.dll
+ 0002:0000003c       __imp__memset              0040e03c     vcruntime:VCRUNTIME140.dll
+ 0002:00000040       __imp__strrchr             0040e040     vcruntime:VCRUNTIME140.dll
+ 0002:00000044       __imp___except_handler4_common 0040e044     vcruntime:VCRUNTIME140.dll
+ 0002:00000048       __imp__strchr              0040e048     vcruntime:VCRUNTIME140.dll
+ 0002:0000004c       \177VCRUNTIME140_NULL_THUNK_DATA 0040e04c     vcruntime:VCRUNTIME140.dll
+ 0002:00000050       __imp__atoi                0040e050     ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0002:00000054       \177api-ms-win-crt-convert-l1-1-0_NULL_THUNK_DATA 0040e054     ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0002:00000058       __imp__remove              0040e058     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0002:0000005c       __imp__rename              0040e05c     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0002:00000060       __imp___fullpath           0040e060     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0002:00000064       \177api-ms-win-crt-filesystem-l1-1-0_NULL_THUNK_DATA 0040e064     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0002:00000068       __imp__malloc              0040e068     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:0000006c       __imp___set_new_mode       0040e06c     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:00000070       __imp__free                0040e070     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:00000074       __imp__realloc             0040e074     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:00000078       \177api-ms-win-crt-heap-l1-1-0_NULL_THUNK_DATA 0040e078     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:0000007c       __imp___configthreadlocale 0040e07c     ucrt:api-ms-win-crt-locale-l1-1-0.dll
+ 0002:00000080       \177api-ms-win-crt-locale-l1-1-0_NULL_THUNK_DATA 0040e080     ucrt:api-ms-win-crt-locale-l1-1-0.dll
+ 0002:00000084       __imp____setusermatherr    0040e084     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:00000088       \177api-ms-win-crt-math-l1-1-0_NULL_THUNK_DATA 0040e088     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:0000008c       __imp___get_initial_narrow_environment 0040e08c     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:00000090       __imp___initterm           0040e090     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:00000094       __imp___initterm_e         0040e094     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:00000098       __imp___exit               0040e098     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:0000009c       __imp___initialize_narrow_environment 0040e09c     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000a0       __imp____p___argc          0040e0a0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000a4       __imp____p___argv          0040e0a4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000a8       __imp___cexit              0040e0a8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000ac       __imp___c_exit             0040e0ac     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000b0       __imp___register_thread_local_exe_atexit_callback 0040e0b0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000b4       __imp___set_app_type       0040e0b4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000b8       __imp___configure_narrow_argv 0040e0b8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000bc       __imp___seh_filter_exe     0040e0bc     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000c0       __imp___seh_filter_dll     0040e0c0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000c4       __imp___initialize_onexit_table 0040e0c4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000c8       __imp___register_onexit_function 0040e0c8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000cc       __imp___execute_onexit_table 0040e0cc     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000d0       __imp___crt_atexit         0040e0d0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000d4       __imp___crt_at_quick_exit  0040e0d4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000d8       __imp___controlfp_s        0040e0d8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000dc       __imp__terminate           0040e0dc     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000e0       __imp__strerror            0040e0e0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000e4       __imp___errno              0040e0e4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000e8       __imp__exit                0040e0e8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000ec       \177api-ms-win-crt-runtime-l1-1-0_NULL_THUNK_DATA 0040e0ec     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000f0       __imp____acrt_iob_func     0040e0f0     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:000000f4       __imp__fclose              0040e0f4     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:000000f8       __imp____p__commode        0040e0f8     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:000000fc       __imp__getc                0040e0fc     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000100       __imp__ferror              0040e100     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000104       __imp____stdio_common_vsprintf 0040e104     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000108       __imp____stdio_common_vfprintf 0040e108     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:0000010c       __imp____stdio_common_vsscanf 0040e10c     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000110       __imp___set_fmode          0040e110     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000114       __imp__fwrite              0040e114     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000118       __imp__fseek               0040e118     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:0000011c       __imp__fread               0040e11c     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000120       __imp__fopen               0040e120     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000124       __imp__fgets               0040e124     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000128       __imp__feof                0040e128     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:0000012c       \177api-ms-win-crt-stdio-l1-1-0_NULL_THUNK_DATA 0040e12c     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000130       __imp__strncmp             0040e130     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:00000134       __imp___strdup             0040e134     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:00000134       __imp__strdup              0040e134     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:00000138       \177api-ms-win-crt-string-l1-1-0_NULL_THUNK_DATA 0040e138     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:0000013c       ___guard_check_icall_fptr  0040e13c     MSVCRT:guard_support.obj
+ 0002:00000140       ___xc_a                    0040e140     MSVCRT:initializers.obj
+ 0002:0000014c       ___xc_z                    0040e14c     MSVCRT:initializers.obj
+ 0002:00000150       ___xi_a                    0040e150     MSVCRT:initializers.obj
+ 0002:0000015c       ___xi_z                    0040e15c     MSVCRT:initializers.obj
+ 0002:00000160       ___xp_a                    0040e160     MSVCRT:initializers.obj
+ 0002:00000164       ___xp_z                    0040e164     MSVCRT:initializers.obj
+ 0002:00000168       ___xt_a                    0040e168     MSVCRT:initializers.obj
+ 0002:0000016c       ___xt_z                    0040e16c     MSVCRT:initializers.obj
+ 0002:00000170       ??_C@_00CNPNBAHC@?$AA@     0040e170     Main.obj
+ 0002:00000174       ??_C@_0O@CADPHFCO@?6?$CDline?5?$CFd?5?$CFs?6?$AA@ 0040e174     Main.obj
+ 0002:00000184       ??_C@_0BD@JDPLLKPM@?$CFs?$CI?$CFd?$CJ?3?5Error?3?5?$CFs?6?$AA@ 0040e184     Main.obj
+ 0002:00000198       ??_C@_0BK@NJHIFDJJ@Can?8t?5open?5file?5?8?$CFs?8?3?5?$CFs?6?$AA@ 0040e198     Main.obj
+ 0002:000001b4       ??_C@_03OJNPLEDH@?1?$CK?6?$AA@ 0040e1b4     Main.obj
+ 0002:000001b8       ??_C@_0EJ@PKLGONFE@?5?$CK?5This?5file?5is?5generated?5by?5Ent@ 0040e1b8     Main.obj
+ 0002:00000204       ??_C@_04POGNIBOL@?5?$CK?1?6?$AA@ 0040e204     Main.obj
+ 0002:0000020c       ??_C@_01EEMJAFIK@?6?$AA@   0040e20c     Main.obj
+ 0002:00000210       ??_C@_02JDPG@rb?$AA@       0040e210     Main.obj
+ 0002:00000214       ??_C@_02GMLFBBN@wb?$AA@    0040e214     Main.obj
+ 0002:00000218       ??_C@_05IPCKHCMJ@?$CDline?$AA@ 0040e218     Main.obj
+ 0002:00000220       ??_C@_01KDCPPGHE@r?$AA@    0040e220     Main.obj
+ 0002:00000224       ??_C@_02PDPNPKPP@?$CDl?$AA@ 0040e224     Main.obj
+ 0002:00000228       ??_C@_0CI@OEGCKBPG@Usage?3?5Ecc?5?$DMes_file_name?$DO?6?5?5?5?5?5?5@ 0040e228     Main.obj
+ 0002:00000250       ??_C@_05LFCABDLJ@?9line?$AA@ 0040e250     Main.obj
+ 0002:00000258       ??_C@_08NLMFIGIG@?4cpp_tmp?$AA@ 0040e258     Main.obj
+ 0002:00000264       ??_C@_04BFHBNAMM@?4cpp?$AA@ 0040e264     Main.obj
+ 0002:0000026c       ??_C@_06CIJIKBCD@?4h_tmp?$AA@ 0040e26c     Main.obj
+ 0002:00000274       ??_C@_02JPEJKMKI@?4h?$AA@  0040e274     Main.obj
+ 0002:00000278       ??_C@_0O@CLCCNHBL@_tables?4h_tmp?$AA@ 0040e278     Main.obj
+ 0002:00000288       ??_C@_09DBNEJHFH@_tables?4h?$AA@ 0040e288     Main.obj
+ 0002:00000294       ??_C@_01NOFIACDB@w?$AA@    0040e294     Main.obj
+ 0002:00000298       ??_C@_0CL@DGGPKHEJ@?5?5BOOL?5?$CFs?$CIconst?5CEntityEvent?5?$CG__@ 0040e298     Parser.obj
+ 0002:000002c8       ??_C@_0EI@EAGLFNAC@?5?$HL0x?$CF08x?0?5?91?0?5CEntity?3?3pEventHan@ 0040e2c8     Parser.obj
+ 0002:00000310       ??_C@_0ED@JGGBEOAM@?5?$HL?$CFs?0?5?$CFs?0?5CEntity?3?3pEventHandler@ 0040e310     Parser.obj
+ 0002:00000354       ??_C@_06BJBFBFHM@0x?$CF08x?$AA@ 0040e354     Parser.obj
+ 0002:0000035c       ??_C@_0BA@HFKGCFOD@H0x?$CF08x_?$CFs_?$CF02d?$AA@ 0040e35c     Parser.obj
+ 0002:0000036c       ??_C@_01GBGANLPD@0?$AA@    0040e36c     Parser.obj
+ 0002:00000370       ??_C@_02JMMFPCED@?$CC?$CC?$AA@ 0040e370     Parser.obj
+ 0002:00000374       ??_C@_0BA@GLBOJLJO@m_penPrediction?$AA@ 0040e374     Parser.obj
+ 0002:00000384       ??_C@_03EAIPFAE@255?$AA@   0040e384     Parser.obj
+ 0002:00000388       ??_C@_0GM@DEHLHNDA@?5CEntityProperty?$CICEntityProperty@ 0040e388     Parser.obj
+ 0002:000003f4       ??_C@_0P@PLLLJNDE@CEntityPointer?$AA@ 0040e3f4     Parser.obj
+ 0002:00000404       ??_C@_09BIBJPILF@?5?5?$CFs?5?$CFs?$DL?6?$AA@ 0040e404     Parser.obj
+ 0002:00000410       ??_C@_0BL@FKNEPCHD@?5?5m_penPrediction?5?$DN?5NULL?$DL?6?$AA@ 0040e410     Parser.obj
+ 0002:000048ac       ??_C@_0BG@FMAEELCM@parser?5stack?5overflow?$AA@ 004128ac     Parser.obj
+ 0002:000048c4       ??_C@_0DD@LFMPLNMN@Maximum?5allowed?5id?5for?5entity?5so@ 004128c4     Parser.obj
+ 0002:000048f8       ??_C@_0BG@FEHNNNF@?$CDifndef?5_?$CFs_INCLUDED?6?$AA@ 004128f8     Parser.obj
+ 0002:00004910       ??_C@_0BI@GFNIFOLH@?$CDdefine?5_?$CFs_INCLUDED?51?6?$AA@ 00412910     Parser.obj
+ 0002:00004928       ??_C@_0BB@BLFIGPJC@?$CDinclude?5?$DM?$CFs?4h?$DO?6?$AA@ 00412928     Parser.obj
+ 0002:0000493c       ??_C@_0BI@DNCMCMKA@?$CDinclude?5?$DM?$CFs_tables?4h?$DO?6?$AA@ 0041293c     Parser.obj
+ 0002:00004954       ??_C@_0BI@PMEGFLLH@?$CDendif?5?1?1?5_?$CFs_INCLUDED?6?$AA@ 00412954     Parser.obj
+ 0002:0000496c       ??_C@_03OFAPEBGM@?$CFs?6?$AA@ 0041296c     Parser.obj
+ 0002:00004970       ??_C@_0BA@OFKKKOHI@EP_ENUMBEG?$CI?$CFs?$CJ?6?$AA@ 00412970     Parser.obj
+ 0002:00004980       ??_C@_0DC@JJKEKDPB@extern?5DECL_DLL?5CEntityPropertyE@ 00412980     Parser.obj
+ 0002:000049b4       ??_C@_0L@KPNIIEFJ@enum?5?$CFs?5?$HL?6?$AA@ 004129b4     Parser.obj
+ 0002:000049c0       ??_C@_0BC@IBDBLIJC@EP_ENUMEND?$CI?$CFs?$CJ?$DL?6?6?$AA@ 004129c0     Parser.obj
+ 0002:000049d4       ??_C@_03JFDPLKFJ@?$HN?$DL?6?$AA@ 004129d4     Parser.obj
+ 0002:000049d8       ??_C@_0DN@HGLJAAJC@DECL_DLL?5inline?5void?5ClearToDefa@ 004129d8     Parser.obj
+ 0002:00004a18       ??_C@_0BJ@FDLOCGCC@?5?5EP_ENUMVALUE?$CI?$CFs?0?5?$CFs?$CJ?0?6?$AA@ 00412a18     Parser.obj
+ 0002:00004a34       ??_C@_0M@PGKAABMB@?5?5?$CFs?5?$DN?5?$CFs?0?6?$AA@ 00412a34     Parser.obj
+ 0002:00004a40       ??_C@_0BN@CMIHDEBI@?$CDdefine?5EVENTCODE_?$CFs?50x?$CF08x?6?$AA@ 00412a40     Parser.obj
+ 0002:00004a60       ??_C@_0DD@PDMOAMBL@class?5DECL_DLL?5?$CFs?5?3?5public?5CEnti@ 00412a60     Parser.obj
+ 0002:00004a94       ??_C@_06IMPKCPFP@?$CFs?$CI?$CJ?$DL?6?$AA@ 00412a94     Parser.obj
+ 0002:00004a9c       ??_C@_0BP@NBDHLMOO@CEntityEvent?5?$CKMakeCopy?$CIvoid?$CJ?$DL?6?$AA@ 00412a9c     Parser.obj
+ 0002:00004ac0       ??_C@_0FM@NMEOEKNP@CEntityEvent?5?$CK?$CFs?3?3MakeCopy?$CIvoid?$CJ@ 00412ac0     Parser.obj
+ 0002:00004b1c       ??_C@_0CK@LGHEMBCP@?$CFs?3?3?$CFs?$CI?$CJ?5?3?5CEntityEvent?$CIEVENTCOD@ 00412b1c     Parser.obj
+ 0002:00004b48       ??_C@_0DM@EONBLOHJ@DECL_DLL?5inline?5void?5ClearToDefa@ 00412b48     Parser.obj
+ 0002:00004b84       ??_C@_07FDBNMONJ@?$CFs?5?$CFs?$DL?6?$AA@ 00412b84     Parser.obj
+ 0002:00004b8c       ??_C@_0BG@MODGKCLJ@?5ClearToDefault?$CI?$CFs?$CJ?$DL?6?$AA@ 00412b8c     Parser.obj
+ 0002:00004ba4       ??_C@_0BJ@GLDKCFN@?$CDdefine?5ENTITYCLASS?5?$CFs?6?6?$AA@ 00412ba4     Parser.obj
+ 0002:00004bc0       ??_C@_0DC@GHDDPCMK@extern?5?$CCC?$CC?5DECL_DLL?5CDLLEntityCl@ 00412bc0     Parser.obj
+ 0002:00004bf4       ??_C@_0BN@HDAJNAHN@?$CFs?5?$CFs?5?3?5public?5?$CFs?5?$HL?6public?3?6?$AA@ 00412bf4     Parser.obj
+ 0002:00004c14       ??_C@_08HNPFDDPN@DECL_DLL?$AA@ 00412c14     Parser.obj
+ 0002:00004c20       ??_C@_0CP@INKEKFAI@?5?5?$CFs?5virtual?5void?5SetDefaultProp@ 00412c20     Parser.obj
+ 0002:00004c50       ??_C@_0CH@DHBJDMIJ@void?5?$CFs?3?3SetDefaultProperties?$CIvo@ 00412c50     Parser.obj
+ 0002:00004c78       ??_C@_0CF@JJAGFCHC@CEntityProperty?5?$CFs_properties?$FL?$FN?5@ 00412c78     Parser.obj
+ 0002:00004ca0       ??_C@_0CB@EBPNHJAO@?5?5?$CFs?3?3SetDefaultProperties?$CI?$CJ?$DL?6?$HN?6@ 00412ca0     Parser.obj
+ 0002:00004cc4       ??_C@_0CG@PHCDOONG@CEntityComponent?5?$CFs_components?$FL?$FN@ 00412cc4     Parser.obj
+ 0002:00004cec       ??_C@_0CG@HAGAPEHK@CEventHandlerEntry?5?$CFs_handlers?$FL?$FN@ 00412cec     Parser.obj
+ 0002:00004d14       ??_C@_0DC@FNGEALEP@?$HN?$DL?6?$CDdefine?5?$CFs_handlersct?5ARRAYCO@ 00412d14     Parser.obj
+ 0002:00004d48       ??_C@_0CJ@DJAHJACA@CEntity?5?$CK?$CFs_New?$CIvoid?$CJ?5?$HL?5return?5N@ 00412d48     Parser.obj
+ 0002:00004d74       ??_C@_0CL@OOJAPAHF@CEntity?5?$CK?$CFs_New?$CIvoid?$CJ?5?$HL?5return?5n@ 00412d74     Parser.obj
+ 0002:00004da0       ??_C@_0BP@CLIDANBD@void?5?$CFs_OnInitClass?$CIvoid?$CJ?5?$HL?$HN?$DL?6?$AA@ 00412da0     Parser.obj
+ 0002:00004dc0       ??_C@_0BM@NHDHBHEA@void?5?$CFs_OnInitClass?$CIvoid?$CJ?$DL?6?$AA@ 00412dc0     Parser.obj
+ 0002:00004ddc       ??_C@_0BO@ICMMAHAM@void?5?$CFs_OnEndClass?$CIvoid?$CJ?5?$HL?$HN?$DL?6?$AA@ 00412ddc     Parser.obj
+ 0002:00004dfc       ??_C@_0BL@FNIDGBFA@void?5?$CFs_OnEndClass?$CIvoid?$CJ?$DL?6?$AA@ 00412dfc     Parser.obj
+ 0002:00004e18       ??_C@_0DM@CBONEMLP@void?5?$CFs_OnPrecache?$CICDLLEntityCla@ 00412e18     Parser.obj
+ 0002:00004e54       ??_C@_0DJ@OEBPFOFD@void?5?$CFs_OnPrecache?$CICDLLEntityCla@ 00412e54     Parser.obj
+ 0002:00004e90       ??_C@_0CF@OCJKDICF@void?5?$CFs_OnWorldEnd?$CICWorld?5?$CKpwo?$CJ?5@ 00412e90     Parser.obj
+ 0002:00004eb8       ??_C@_0CC@PAJINDHG@void?5?$CFs_OnWorldEnd?$CICWorld?5?$CKpwo?$CJ?$DL@ 00412eb8     Parser.obj
+ 0002:00004edc       ??_C@_0CG@KBOBBBJA@void?5?$CFs_OnWorldInit?$CICWorld?5?$CKpwo?$CJ@ 00412edc     Parser.obj
+ 0002:00004f04       ??_C@_0CD@MBJABMHH@void?5?$CFs_OnWorldInit?$CICWorld?5?$CKpwo?$CJ@ 00412f04     Parser.obj
+ 0002:00004f28       ??_C@_0CG@DLDHCPC@void?5?$CFs_OnWorldTick?$CICWorld?5?$CKpwo?$CJ@ 00412f28     Parser.obj
+ 0002:00004f50       ??_C@_0CD@BOGPFFJD@void?5?$CFs_OnWorldTick?$CICWorld?5?$CKpwo?$CJ@ 00412f50     Parser.obj
+ 0002:00004f74       ??_C@_0CI@GEONPKMD@void?5?$CFs_OnWorldRender?$CICWorld?5?$CKpw@ 00412f74     Parser.obj
+ 0002:00004f9c       ??_C@_0CF@GHDIBOEI@void?5?$CFs_OnWorldRender?$CICWorld?5?$CKpw@ 00412f9c     Parser.obj
+ 0002:00004fc4       ??_C@_0DB@OMAJOBLP@ENTITY_CLASSDEFINITION?$CI?$CFs?0?5?$CFs?0?5?$CF@ 00412fc4     Parser.obj
+ 0002:00004ff8       ??_C@_0CF@CMCILINF@DECLARE_CTFILENAME?$CI_fnm?$CFs_tbn?0?5?$CF@ 00412ff8     Parser.obj
+ 0002:00005020       ??_C@_0L@FIGEAJHN@?5DECL_DLL?5?$AA@ 00413020     Parser.obj
+ 0002:0000502c       ??_C@_0BE@IIMFBBIK@?$CCAbstractBaseClass?$CC?$AA@ 0041302c     Parser.obj
+ 0002:00005040       ??_C@_0P@LMAPFPMK@?$CCIsTargetable?$CC?$AA@ 00413040     Parser.obj
+ 0002:00005050       ??_C@_0DJ@MLEJEGMF@virtual?5BOOL?5IsTargetable?$CIvoid?$CJ?5@ 00413050     Parser.obj
+ 0002:0000508c       ??_C@_0O@HLFDPNNG@?$CCIsImportant?$CC?$AA@ 0041308c     Parser.obj
+ 0002:0000509c       ??_C@_0DI@BIDANMBI@virtual?5BOOL?5IsImportant?$CIvoid?$CJ?5c@ 0041309c     Parser.obj
+ 0002:000050d4       ??_C@_09ECLENKDM@?$CCHasName?$CC?$AA@ 004130d4     Parser.obj
+ 0002:000050e0       ??_C@_0EE@IDJJMOHO@virtual?5const?5CTString?5?$CGGetName?$CI@ 004130e0     Parser.obj
+ 0002:00005124       ??_C@_0BD@JGLMAKMJ@?$CCCanBePredictable?$CC?$AA@ 00413124     Parser.obj
+ 0002:00005138       ??_C@_0EH@NCOPKBCA@virtual?5CEntity?5?$CKGetPredictionPa@ 00413138     Parser.obj
+ 0002:00005180       ??_C@_0FC@GLMDDMBO@virtual?5void?5SetPredictionPair?$CIC@ 00413180     Parser.obj
+ 0002:000051d4       ??_C@_0BB@BDEKDLKH@?$CCHasDescription?$CC?$AA@ 004131d4     Parser.obj
+ 0002:000051e8       ??_C@_0FC@KAMMNIDF@virtual?5const?5CTString?5?$CGGetDescr@ 004131e8     Parser.obj
+ 0002:0000523c       ??_C@_0M@ICEHCIGE@?$CCHasTarget?$CC?$AA@ 0041323c     Parser.obj
+ 0002:00005248       ??_C@_0EB@MPCDKPPE@virtual?5CEntity?5?$CKGetTarget?$CIvoid?$CJ@ 00413248     Parser.obj
+ 0002:0000528c       ??_C@_0BI@IDJALIIK@?$CCImplementsOnInitClass?$CC?$AA@ 0041328c     Parser.obj
+ 0002:000052a4       ??_C@_0BH@CNHKOCCD@?$CCImplementsOnEndClass?$CC?$AA@ 004132a4     Parser.obj
+ 0002:000052bc       ??_C@_0BH@PMPDGPAK@?$CCImplementsOnPrecache?$CC?$AA@ 004132bc     Parser.obj
+ 0002:000052d4       ??_C@_0BI@PENJGPHD@?$CCImplementsOnWorldInit?$CC?$AA@ 004132d4     Parser.obj
+ 0002:000052ec       ??_C@_0BH@PJHDOHHC@?$CCImplementsOnWorldEnd?$CC?$AA@ 004132ec     Parser.obj
+ 0002:00005304       ??_C@_0BI@IBHGKGAP@?$CCImplementsOnWorldTick?$CC?$AA@ 00413304     Parser.obj
+ 0002:0000531c       ??_C@_0BK@HBCIOGAC@?$CCImplementsOnWorldRender?$CC?$AA@ 0041331c     Parser.obj
+ 0002:00005338       ??_C@_0BC@OKABNABC@Unknown?5feature?3?5?$AA@ 00413338     Parser.obj
+ 0002:0000534c       ??_C@_0BI@BPDBNLOA@?5?5CEntityProperty?$CI?$CJ?6?$HN?$DL?6?$AA@ 0041334c     Parser.obj
+ 0002:00005364       ??_C@_0BL@FBLHPNNJ@?$CDdefine?5?$CFs_propertiesct?50?6?$AA@ 00413364     Parser.obj
+ 0002:00005380       ??_C@_0DD@PJEGAIAA@?$CDdefine?5?$CFs_propertiesct?5ARRAYCOU@ 00413380     Parser.obj
+ 0002:000053b8       ??_C@_0EO@LBGOOLIC@?5CEntityProperty?$CI?$CFs?0?5?$CFs?0?5?$CI0x?$CF08x@ 004133b8     Parser.obj
+ 0002:00005408       ??_C@_05LDOEBFOB@?5?5?$CFs?6?$AA@ 00413408     Parser.obj
+ 0002:00005410       ??_C@_0BK@FKCNBKD@CEntityProperty?3?3EPT_ENUM?$AA@ 00413410     Parser.obj
+ 0002:0000542c       ??_C@_01HNPIGOCE@?$CG?$AA@ 0041342c     Parser.obj
+ 0002:00005430       ??_C@_05LLKHCDCC@_enum?$AA@ 00413430     Parser.obj
+ 0002:00005438       ??_C@_05LJGMCFOG@enum?5?$AA@ 00413438     Parser.obj
+ 0002:00005440       ??_C@_0BL@PAPEDKME@CEntityProperty?3?3EPT_FLAGS?$AA@ 00413440     Parser.obj
+ 0002:0000545c       ??_C@_05IJDGEDDD@ULONG?$AA@ 0041345c     Parser.obj
+ 0002:00005464       ??_C@_0BM@CKMDLCIM@CEntityProperty?3?3EPT_STRING?$AA@ 00413464     Parser.obj
+ 0002:00005480       ??_C@_04HIBGFPH@NULL?$AA@  00413480     Parser.obj
+ 0002:00005488       ??_C@_08MCIFDO@CTString?$AA@ 00413488     Parser.obj
+ 0002:00005494       ??_C@_0CB@CCBJHIPM@CEntityProperty?3?3EPT_STRINGTRANS@ 00413494     Parser.obj
+ 0002:000054b8       ??_C@_0O@IHHBKHPH@CTStringTrans?$AA@ 004134b8     Parser.obj
+ 0002:000054c8       ??_C@_0BO@CDLENBAH@CEntityProperty?3?3EPT_FILENAME?$AA@ 004134c8     Parser.obj
+ 0002:000054e8       ??_C@_0L@CBPCNPHF@CTFileName?$AA@ 004134e8     Parser.obj
+ 0002:000054f4       ??_C@_0CD@GHFLFKNA@CEntityProperty?3?3EPT_FILENAMENOD@ 004134f4     Parser.obj
+ 0002:00005518       ??_C@_0BA@COLPEAPK@CTFileNameNoDep?$AA@ 00413518     Parser.obj
+ 0002:00005528       ??_C@_0BK@HJEHNDB@CEntityProperty?3?3EPT_BOOL?$AA@ 00413528     Parser.obj
+ 0002:00005544       ??_C@_04PPJDIBFE@BOOL?$AA@ 00413544     Parser.obj
+ 0002:0000554c       ??_C@_0BL@CPLGJID@CEntityProperty?3?3EPT_COLOR?$AA@ 0041354c     Parser.obj
+ 0002:00005568       ??_C@_05DPNLPLKI@COLOR?$AA@ 00413568     Parser.obj
+ 0002:00005570       ??_C@_0BL@FLOHKHIC@CEntityProperty?3?3EPT_FLOAT?$AA@ 00413570     Parser.obj
+ 0002:0000558c       ??_C@_05GGMHDFKJ@FLOAT?$AA@ 0041358c     Parser.obj
+ 0002:00005594       ??_C@_0BL@KMMMCGOG@CEntityProperty?3?3EPT_INDEX?$AA@ 00413594     Parser.obj
+ 0002:000055b0       ??_C@_05JBOMLEMN@INDEX?$AA@ 004135b0     Parser.obj
+ 0002:000055b8       ??_C@_0BL@NENIBLHJ@CEntityProperty?3?3EPT_RANGE?$AA@ 004135b8     Parser.obj
+ 0002:000055d4       ??_C@_05OJPIIJFC@RANGE?$AA@ 004135d4     Parser.obj
+ 0002:000055dc       ??_C@_0BP@LMCIDDDP@CEntityProperty?3?3EPT_ENTITYPTR?$AA@ 004135dc     Parser.obj
+ 0002:000055fc       ??_C@_0CB@LKENOBDG@CEntityProperty?3?3EPT_MODELOBJECT@ 004135fc     Parser.obj
+ 0002:00005620       ??_C@_0N@PNFHEPHK@CModelObject?$AA@ 00413620     Parser.obj
+ 0002:00005630       ??_C@_0CD@PKNOPBHC@CEntityProperty?3?3EPT_MODELINSTAN@ 00413630     Parser.obj
+ 0002:00005654       ??_C@_0P@DKLFFKMM@CModelInstance?$AA@ 00413654     Parser.obj
+ 0002:00005664       ??_C@_0CA@NCMIAJPC@CEntityProperty?3?3EPT_ANIMOBJECT?$AA@ 00413664     Parser.obj
+ 0002:00005684       ??_C@_0M@IJNGCGHO@CAnimObject?$AA@ 00413684     Parser.obj
+ 0002:00005690       ??_C@_0CB@MGLILAGK@CEntityProperty?3?3EPT_SOUNDOBJECT@ 00413690     Parser.obj
+ 0002:000056b4       ??_C@_0N@IBKCBOCG@CSoundObject?$AA@ 004136b4     Parser.obj
+ 0002:000056c4       ??_C@_0CB@LCOIAPGK@CEntityProperty?3?3EPT_PLACEMENT3D@ 004136c4     Parser.obj
+ 0002:000056e8       ??_C@_0N@JHIGPKPI@CPlacement3D?$AA@ 004136e8     Parser.obj
+ 0002:000056f8       ??_C@_0CD@MGIJJLK@CEntityProperty?3?3EPT_FLOATAABBOX@ 004136f8     Parser.obj
+ 0002:0000571c       ??_C@_0O@FMFLKFML@FLOATaabbox3D?$AA@ 0041371c     Parser.obj
+ 0002:0000572c       ??_C@_0CD@GCMEDEGB@CEntityProperty?3?3EPT_FLOATMATRIX@ 0041372c     Parser.obj
+ 0002:00005750       ??_C@_0O@DCPHAIBA@FLOATmatrix3D?$AA@ 00413750     Parser.obj
+ 0002:00005760       ??_C@_0CB@PABLANAG@CEntityProperty?3?3EPT_FLOATQUAT3D@ 00413760     Parser.obj
+ 0002:00005784       ??_C@_0M@BDNFOJOO@FLOATquat3D?$AA@ 00413784     Parser.obj
+ 0002:00005790       ??_C@_0BL@KCJHFMPG@CEntityProperty?3?3EPT_ANGLE?$AA@ 00413790     Parser.obj
+ 0002:000057ac       ??_C@_05JPLHMONN@ANGLE?$AA@ 004137ac     Parser.obj
+ 0002:000057b4       ??_C@_0BN@JCADCILL@CEntityProperty?3?3EPT_ANGLE3D?$AA@ 004137b4     Parser.obj
+ 0002:000057d4       ??_C@_07PKHCBKJK@ANGLE3D?$AA@ 004137d4     Parser.obj
+ 0002:000057dc       ??_C@_0BN@PDDPEGKN@CEntityProperty?3?3EPT_FLOAT3D?$AA@ 004137dc     Parser.obj
+ 0002:000057fc       ??_C@_07JLEOHEIM@FLOAT3D?$AA@ 004137fc     Parser.obj
+ 0002:00005804       ??_C@_0CC@CGEEDNMK@CEntityProperty?3?3EPT_FLOATplane3@ 00413804     Parser.obj
+ 0002:00005828       ??_C@_0N@HINAOIJM@FLOATplane3D?$AA@ 00413828     Parser.obj
+ 0002:00005838       ??_C@_0CG@PFLEBAFI@CEntityProperty?3?3EPT_ILLUMINATIO@ 00413838     Parser.obj
+ 0002:00005860       ??_C@_0BB@JGOIEBA@ILLUMINATIONTYPE?$AA@ 00413860     Parser.obj
+ 0002:00005874       ??_C@_0BP@NGKMMNOM@CEntityProperty?3?3EPT_ANIMATION?$AA@ 00413874     Parser.obj
+ 0002:00005894       ??_C@_09JCOEOBPO@ANIMATION?$AA@ 00413894     Parser.obj
+ 0002:000058a0       ??_C@_0N@BPNDPNCK@0x7F0000FFUL?$AA@ 004138a0     Parser.obj
+ 0002:000058b0       ??_C@_08BLCDEBHM@?5?$DN?5NULL?$DL?$AA@ 004138b0     Parser.obj
+ 0002:000058bc       ??_C@_0BB@BKMAKBIP@?4SetData?$CINULL?$CJ?$DL?6?$AA@ 004138bc     Parser.obj
+ 0002:000058d0       ??_C@_0BN@FHMJPKJA@?4mo_toTexture?4SetData?$CINULL?$CJ?$DL?$AA@ 004138d0     Parser.obj
+ 0002:000058f0       ??_C@_0L@ICDCAHBP@?4Clear?$CI?$CJ?$DL?6?$AA@ 004138f0     Parser.obj
+ 0002:000058fc       ??_C@_0BC@PPMEEANL@?4SetOwner?$CIthis?$CJ?$DL?6?$AA@ 004138fc     Parser.obj
+ 0002:00005910       ??_C@_0BC@IGEHONCJ@?4Stop_internal?$CI?$CJ?$DL?$AA@ 00413910     Parser.obj
+ 0002:00005924       ??_C@_0CO@GKOEAPON@this?5kind?5of?5property?5must?5have?5@ 00413924     Parser.obj
+ 0002:00005954       ??_C@_0DG@LNEBHLAN@CEntityPointer?5type?5properties?5a@ 00413954     Parser.obj
+ 0002:0000598c       ??_C@_03MHLONNLM@?5?$DN?5?$AA@ 0041398c     Parser.obj
+ 0002:00005990       ??_C@_01ICJEACDI@?$DL?$AA@ 00413990     Parser.obj
+ 0002:00005994       ??_C@_01CLKCMJKC@?5?$AA@   00413994     Parser.obj
+ 0002:00005998       ??_C@_0BJ@HHODMNJE@?5?5CEntityComponent?$CI?$CJ?6?$HN?$DL?6?$AA@ 00413998     Parser.obj
+ 0002:000059b4       ??_C@_0BL@JFJNFGJM@?$CDdefine?5?$CFs_componentsct?50?6?$AA@ 004139b4     Parser.obj
+ 0002:000059d0       ??_C@_0DD@HPLDMMEJ@?$CDdefine?5?$CFs_componentsct?5ARRAYCOU@ 004139d0     Parser.obj
+ 0002:00005a04       ??_C@_0BN@LEHPCNP@?$CDdefine?5?$CFs?5?$CI?$CI0x?$CF08x?$DM?$DM8?$CJ?$CL?$CFs?$CJ?6?$AA@ 00413a04     Parser.obj
+ 0002:00005a24       ??_C@_02DPGNLHGP@NM?$AA@   00413a24     Parser.obj
+ 0002:00005a28       ??_C@_02NAMMIBEF@EF?$AA@   00413a28     Parser.obj
+ 0002:00005a2c       ??_C@_0CH@HGKOMPND@?5CEntityComponent?$CI?$CFs?0?5?$CFs?0?5?$CC?$CFs?$CFs?$CC@ 00413a2c     Parser.obj
+ 0002:00005a54       ??_C@_09NAIGFGKP@ECT_MODEL?$AA@ 00413a54     Parser.obj
+ 0002:00005a60       ??_C@_0M@IKKANEHG@ECT_TEXTURE?$AA@ 00413a60     Parser.obj
+ 0002:00005a6c       ??_C@_09MFHDGAFH@ECT_SOUND?$AA@ 00413a6c     Parser.obj
+ 0002:00005a78       ??_C@_09EPADGMGB@ECT_CLASS?$AA@ 00413a78     Parser.obj
+ 0002:00005a84       ??_C@_04GKJNKENE@void?$AA@ 00413a84     Parser.obj
+ 0002:00005a8c       ??_C@_0CL@DLIDFPPL@use?5?8void?8?5as?5return?5type?5for?5co@ 00413a8c     Parser.obj
+ 0002:00005ab8       ??_C@_0P@FHKFGOGD@?5?$CFs?5?$CFs?5?$CFs?5?$CFs?$DL?6?$AA@ 00413ab8     Parser.obj
+ 0002:00005ac8       ??_C@_0BA@HFJHBDGG@?5?5?$CFs?5?$CFs?3?3?$CFs?5?$CFs?6?$AA@ 00413ac8     Parser.obj
+ 0002:00005ad8       ??_C@_03LFGCOOCF@?5?$HO?5?$AA@ 00413ad8     Parser.obj
+ 0002:00005adc       ??_C@_02PGHGPEOM@?91?$AA@  00413adc     Parser.obj
+ 0002:00005ae0       ??_C@_06INDPHOPG@STATE_?$AA@ 00413ae0     Parser.obj
+ 0002:00005ae8       ??_C@_01IDAFKMJL@_?$AA@    00413ae8     Parser.obj
+ 0002:00005aec       ??_C@_05DNIIFBMG@?$CFs?5?$CFs?$AA@ 00413aec     Parser.obj
+ 0002:00005af4       ??_C@_04KGFMLCPK@Main?$AA@ 00413af4     Parser.obj
+ 0002:00005afc       ??_C@_05IDCJEGLB@EVoid?$AA@ 00413afc     Parser.obj
+ 0002:00005b08       ??_C@_0EO@HCMJGCIO@procedure?5?8Main?8?5can?5take?5input?5@ 00413b08     Parser.obj
+ 0002:00005b58       ??_C@_0M@KNGHIJKJ@STATE_?$CFs_?$CFs?$AA@ 00413b58     Parser.obj
+ 0002:00005b64       ??_C@_0BA@FCMPFMNL@?$CDdefine?5?5?$CFs?5?$CFs?6?$AA@ 00413b64     Parser.obj
+ 0002:00005b78       ??_C@_0FM@ICFJHIIF@BOOL?5?$CFs?3?3?$CFs?$CIconst?5CEntityEvent?5?$CG@ 00413b78     Parser.obj
+ 0002:00005bd8       ??_C@_0FC@MPHPDDFN@?5?5ASSERTMSG?$CI__eeInput?4ee_slEvent@ 00413bd8     Parser.obj
+ 0002:00005c2c       ??_C@_0CI@OGIBBKIM@?5?5const?5?$CFs?5?$CG?$CFs?5?$DN?5?$CIconst?5?$CFs?5?$CG?$CJ__e@ 00413c2c     Parser.obj
+ 0002:00005c54       ??_C@_0CB@NPFCPHFC@?$CFs?5ASSERT?$CIFALSE?$CJ?$DL?5return?5TRUE?$DL?$HN?$DL@ 00413c54     Parser.obj
+ 0002:00005c78       ??_C@_07ECKGCBHH@EVoid?5e?$AA@ 00413c78     Parser.obj
+ 0002:00005c80       ??_C@_02CAHJPPOP@?5e?$AA@  00413c80     Parser.obj
+ 0002:00005c84       ??_C@_02LKHPCEFG@?$CI?$CB?$AA@ 00413c84     Parser.obj
+ 0002:00005c88       ??_C@_0BH@HPFICHFN@?$CJ?$HL?5Jump?$CISTATE_CURRENT?0?$AA@ 00413c88     Parser.obj
+ 0002:00005ca0       ??_C@_0CE@NDHPLBCH@?0?5FALSE?0?5EInternal?$CI?$CJ?$CJ?$DLreturn?5TRU@ 00413ca0     Parser.obj
+ 0002:00005cc4       ??_C@_0BE@GHNHGICD@Jump?$CISTATE_CURRENT?0?$AA@ 00413cc4     Parser.obj
+ 0002:00005cd8       ??_C@_05PJHNCCMO@BOOL?5?$AA@ 00413cd8     Parser.obj
+ 0002:00005ce0       ??_C@_02MOLJINC@?3?3?$AA@  00413ce0     Parser.obj
+ 0002:00005ce4       ??_C@_0CB@NLAGKJNM@?$CIconst?5CEntityEvent?5?$CG__eeInput?$CJ?$HL@ 00413ce4     Parser.obj
+ 0002:00005d08       ??_C@_0DE@HEKANNPN@?6ASSERT?$CI__eeInput?4ee_slEvent?$DN?$DNEV@ 00413d08     Parser.obj
+ 0002:00005d3c       ??_C@_0CN@DOBGOCCM@?6?$CDundef?5STATE_CURRENT?6?$CDdefine?5ST@ 00413d3c     Parser.obj
+ 0002:00005d6c       ??_C@_0CF@FPDGCCFA@?0?5FALSE?0?5EInternal?$CI?$CJ?$CJ?$DLreturn?5TRU@ 00413d6c     Parser.obj
+ 0002:00005d94       ??_C@_0CF@GAEJLEIF@Nested?5loops?5are?5not?5implemented@ 00413d94     Parser.obj
+ 0002:00005dbc       ??_C@_0CA@HKLHKCJO@?$CIconst?5CEntityEvent?5?$CG__eeInput?$CJ?$AA@ 00413dbc     Parser.obj
+ 0002:00005ddc       ??_C@_04JHDLHLK@if?$CI?$CB?$AA@ 00413ddc     Parser.obj
+ 0002:00005de4       ??_C@_0CD@IHPBNBOG@?0?5FALSE?0?5EInternal?$CI?$CJ?$CJ?$DLreturn?5TRU@ 00413de4     Parser.obj
+ 0002:00005e08       ??_C@_0CC@CDJMPJDK@?$CIconst?5CEntityEvent?5?$CG__eeInput?$CJ?5@ 00413e08     Parser.obj
+ 0002:00005e2c       ??_C@_0CK@NLGMBOBI@For?5loops?5across?5states?5are?5not?5@ 00413e2c     Parser.obj
+ 0002:00005e58       ??_C@_0CA@IMEAKPJC@Cannot?5have?5?8wait?8?5in?5functions?$AA@ 00413e58     Parser.obj
+ 0002:00005e78       ??_C@_0CF@IKHHEBAL@?8wait?8?5statements?5must?5not?5be?5ne@ 00413e78     Parser.obj
+ 0002:00005ea0       ??_C@_0BO@JAJAIFEC@default?3?5return?5FALSE?$DL?5break?$DL?$AA@ 00413ea0     Parser.obj
+ 0002:00005ec0       ??_C@_02NCGPMEBG@?$DL?6?$AA@ 00413ec0     Parser.obj
+ 0002:00005ec4       ??_C@_0BF@DHIEICLI@Jump?$CISTATE_CURRENT?0?5?$AA@ 00413ec4     Parser.obj
+ 0002:00005edc       ??_C@_0CB@PMGJIEPB@?0?5FALSE?0?5EBegin?$CI?$CJ?$CJ?$DLreturn?5TRUE?$DL?$HN@ 00413edc     Parser.obj
+ 0002:00005f00       ??_C@_0BN@IAFMNONM@switch?$CI__eeInput?4ee_slEvent?$CJ?$AA@ 00413f00     Parser.obj
+ 0002:00005f20       ??_C@_0BD@PEBCMJLC@return?5TRUE?$DL?$HNBOOL?5?$AA@ 00413f20     Parser.obj
+ 0002:00005f34       ??_C@_0CE@MLPCPLEK@Cannot?5have?5?8autowait?8?5in?5functi@ 00413f34     Parser.obj
+ 0002:00005f58       ??_C@_0BP@LIGABDEB@switch?$CI__eeInput?4ee_slEvent?$CJ?5?$HL?$AA@ 00413f58     Parser.obj
+ 0002:00005f78       ??_C@_0CE@MPFOFPDP@case?5EVENTCODE_EBegin?3?5return?5TR@ 00413f78     Parser.obj
+ 0002:00005f9c       ??_C@_0CL@PKDAEAHO@case?5EVENTCODE_ETimer?3?5Jump?$CISTAT@ 00413f9c     Parser.obj
+ 0002:00005fc8       ??_C@_0CE@MKGJCLHG@?0?5FALSE?0?5EInternal?$CI?$CJ?$CJ?$DL?5return?5TR@ 00413fc8     Parser.obj
+ 0002:00005fec       ??_C@_0BK@KFGGABMB@default?3?5return?5FALSE?$DL?5?$HN?$HN?$AA@ 00413fec     Parser.obj
+ 0002:00006008       ??_C@_0CE@FAECIAPP@Cannot?5have?5?8autocall?8?5in?5functi@ 00414008     Parser.obj
+ 0002:0000602c       ??_C@_0BA@FBNFJOO@case?5EVENTCODE_?$AA@ 0041402c     Parser.obj
+ 0002:0000603c       ??_C@_0BG@OBJIFAJE@?3?5Jump?$CISTATE_CURRENT?0?$AA@ 0041403c     Parser.obj
+ 0002:00006054       ??_C@_0CC@DBJHGFDJ@?0?5FALSE?0?5__eeInput?$CJ?$DL?5return?5TRUE@ 00414054     Parser.obj
+ 0002:00006078       ??_C@_06LIJLOJAG@const?5?$AA@ 00414078     Parser.obj
+ 0002:00006080       ??_C@_03LJOKOINF@?$DN?5?$CI?$AA@ 00414080     Parser.obj
+ 0002:00006084       ??_C@_0O@EKFNEKDL@?$CG?$CJ__eeInput?$DL?6?$AA@ 00414084     Parser.obj
+ 0002:00006094       ??_C@_03DCLPMJHI@__e?$AA@  00414094     Parser.obj
+ 0002:00006098       ??_C@_0BM@HOIAIMKI@case?5EVENTCODE_EBegin?3?5Call?$AA@ 00414098     Parser.obj
+ 0002:000060b4       ??_C@_0BA@BGNICBJE@STATE_CURRENT?0?5?$AA@ 004140b4     Parser.obj
+ 0002:000060c4       ??_C@_02KEGNLNML@?0?5?$AA@ 004140c4     Parser.obj
+ 0002:000060c8       ??_C@_0O@EJBNKNJE@?$DLreturn?5TRUE?$DL?$AA@ 004140c8     Parser.obj
+ 0002:000060d8       ??_C@_0BM@CLIHJAA@SetTimerAt?$CITHINKTIME_NEVER?$CJ?$AA@ 004140d8     Parser.obj
+ 0002:000060f4       ??_C@_0O@IPMFENNK@SetTimerAfter?$AA@ 004140f4     Parser.obj
+ 0002:00006104       ??_C@_0CA@CKBLOEPB@Cannot?5have?5?8jump?8?5in?5functions?$AA@ 00414104     Parser.obj
+ 0002:00006124       ??_C@_04BIEPDJCB@Jump?$AA@ 00414124     Parser.obj
+ 0002:0000612c       ??_C@_0CA@BHPANECH@Cannot?5have?5?8call?8?5in?5functions?$AA@ 0041412c     Parser.obj
+ 0002:0000614c       ??_C@_0CJ@FLMEHIIN@?8call?8?5must?5be?5inside?5a?5?8wait?8?5s@ 0041414c     Parser.obj
+ 0002:00006178       ??_C@_04CNJBKMPC@Call?$AA@ 00414178     Parser.obj
+ 0002:00006180       ??_C@_07BAHJHAMG@EVoid?$CI?$CJ?$AA@ 00414180     Parser.obj
+ 0002:00006188       ??_C@_06CGMMIPGG@?0?5TRUE?$AA@ 00414188     Parser.obj
+ 0002:00006190       ??_C@_07HFBNDKLH@?0?5FALSE?$AA@ 00414190     Parser.obj
+ 0002:00006198       ??_C@_0CB@DOBLOBNC@UnsetTimer?$CI?$CJ?$DLJump?$CISTATE_CURRENT?0@ 00414198     Parser.obj
+ 0002:000061bc       ??_C@_0BH@DOOIPCDE@?0?5FALSE?0?5EInternal?$CI?$CJ?$CJ?$DL?$AA@ 004141bc     Parser.obj
+ 0002:000061d4       ??_C@_0M@FBPAOCKD@return?5TRUE?$AA@ 004141d4     Parser.obj
+ 0002:000061e0       ??_C@_0N@JOGEDAOF@return?5FALSE?$AA@ 004141e0     Parser.obj
+ 0002:000061f0       ??_C@_0BG@OKDCEJG@Return?$CISTATE_CURRENT?0?$AA@ 004141f0     Parser.obj
+ 0002:00006208       ??_C@_02LJALELK@?$CJ?$DL?$AA@ 00414208     Parser.obj
+ 0002:0000620c       ??_C@_05CHPKCFD@?5TRUE?$AA@ 0041420c     Parser.obj
+ 0002:00006214       ??_C@_04CKOINMPC@case?$AA@ 00414214     Parser.obj
+ 0002:0000621c       ??_C@_0L@PEIOCAAC@EVENTCODE_?$AA@ 0041421c     Parser.obj
+ 0002:00006228       ??_C@_0BF@LKLLLIPE@ASSERT?$CIFALSE?$CJ?$DLbreak?$DL?$AA@ 00414228     Parser.obj
+ 0002:00006240       ??_C@_07DLHCIBDH@default?$AA@ 00414240     Parser.obj
+ 0002:00006248       ??_C@_0M@BJIBBOFC@parse?5error?$AA@ 00414248     Parser.obj
+ 0002:00007aac       ??_C@_0BA@FGCPDDGB@?6?$CDline?5?$CFd?5?$CC?$CFs?$CC?6?$AA@ 00415aac     Scanner.obj
+ 0002:00007abc       ??_C@_0P@JJPEMBPP@?$CDline?5?$CFd?5?$CC?$CFs?$CC?6?$AA@ 00415abc     Scanner.obj
+ 0002:00007acc       ??_C@_0CM@CDNPHALP@Unrecognized?5character?5?8?$CFc?8?5?$CIASC@ 00415acc     Scanner.obj
+ 0002:00007af8       ??_C@_0DD@JHONDBLF@fatal?5flex?5scanner?5internal?5erro@ 00415af8     Scanner.obj
+ 0002:00007b2c       ??_C@_0DI@MLIALAAB@fatal?5flex?5scanner?5internal?5erro@ 00415b2c     Scanner.obj
+ 0002:00007b64       ??_C@_0CM@KBIPOOPN@fatal?5error?5?9?5scanner?5input?5buff@ 00415b64     Scanner.obj
+ 0002:00007b90       ??_C@_0BN@KCKEEIJO@input?5in?5flex?5scanner?5failed?$AA@ 00415b90     Scanner.obj
+ 0002:00007bb0       ??_C@_0CM@KGHDCJOD@out?5of?5dynamic?5memory?5in?5yy_crea@ 00415bb0     Scanner.obj
+ 0002:00007bdc       ??_C@_0CK@BNMIIHCN@out?5of?5dynamic?5memory?5in?5yy_scan@ 00415bdc     Scanner.obj
+ 0002:00007c08       ??_C@_0CJ@POHJPACM@out?5of?5dynamic?5memory?5in?5yy_scan@ 00415c08     Scanner.obj
+ 0002:00007c34       ??_C@_0BO@LOBFGDHO@bad?5buffer?5in?5yy_scan_bytes?$CI?$CJ?$AA@ 00415c34     Scanner.obj
+ 0002:00007cb8       __load_config_used         00415cb8     MSVCRT:loadcfg.obj
+ 0002:00007d20       ___safe_se_handler_table   00415d20     <linker-defined>
+ 0002:00008028       ___rtc_iaa                 00416028     MSVCRT:_initsect_.obj
+ 0002:0000802c       ___rtc_izz                 0041602c     MSVCRT:_initsect_.obj
+ 0002:00008030       ___rtc_taa                 00416030     MSVCRT:_initsect_.obj
+ 0002:00008034       ___rtc_tzz                 00416034     MSVCRT:_initsect_.obj
+ 0002:00008074       __IMPORT_DESCRIPTOR_VCRUNTIME140 00416074     vcruntime:VCRUNTIME140.dll
+ 0002:00008088       __IMPORT_DESCRIPTOR_api-ms-win-crt-stdio-l1-1-0 00416088     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:0000809c       __IMPORT_DESCRIPTOR_api-ms-win-crt-filesystem-l1-1-0 0041609c     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0002:000080b0       __IMPORT_DESCRIPTOR_api-ms-win-crt-heap-l1-1-0 004160b0     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:000080c4       __IMPORT_DESCRIPTOR_api-ms-win-crt-runtime-l1-1-0 004160c4     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000080d8       __IMPORT_DESCRIPTOR_api-ms-win-crt-string-l1-1-0 004160d8     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:000080ec       __IMPORT_DESCRIPTOR_api-ms-win-crt-convert-l1-1-0 004160ec     ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0002:00008100       __IMPORT_DESCRIPTOR_api-ms-win-crt-math-l1-1-0 00416100     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:00008114       __IMPORT_DESCRIPTOR_api-ms-win-crt-locale-l1-1-0 00416114     ucrt:api-ms-win-crt-locale-l1-1-0.dll
+ 0002:00008128       __IMPORT_DESCRIPTOR_KERNEL32 00416128     kernel32:KERNEL32.dll
+ 0002:0000813c       __NULL_IMPORT_DESCRIPTOR   0041613c     vcruntime:VCRUNTIME140.dll
+ 0003:00000000       ?_iLinesCt@@3HA            00417000     Main.obj
+ 0003:00000004       ?iLastLine@@3HA            00417004     Scanner.obj
+ 0003:00000010       ___security_cookie_complement 00417010     MSVCRT:gs_cookie.obj
+ 0003:00000014       ___security_cookie         00417014     MSVCRT:gs_cookie.obj
+ 0003:00000020       ___scrt_native_dllmain_reason 00417020     MSVCRT:utility.obj
+ 0003:00000024       ___scrt_default_matherr    00417024     MSVCRT:matherr.obj
+ 0003:00000030       ___isa_enabled             00417030     MSVCRT:_cpu_disp_.obj
+ 0003:00000034       ___scrt_ucrt_dll_is_in_use 00417034     MSVCRT:ucrt_stubs.obj
+ 0003:00000038       ?_fInput@@3PAU_iobuf@@A    00417038     Main.obj
+ 0003:0000003c       ?_bTrackLineInformation@@3HA 0041703c     Main.obj
+ 0003:00000040       ?_strInputFileName@@3PADA  00417040     Main.obj
+ 0003:00000044       ?_fImplementation@@3PAU_iobuf@@A 00417044     Main.obj
+ 0003:00000048       ?_fDeclaration@@3PAU_iobuf@@A 00417048     Main.obj
+ 0003:0000004c       ?_fTables@@3PAU_iobuf@@A   0041704c     Main.obj
+ 0003:00000050       ?_fExports@@3PAU_iobuf@@A  00417050     Main.obj
+ 0003:00000054       ?_strFileNameBase@@3PADA   00417054     Main.obj
+ 0003:00000058       ?_strFileNameBaseIdentifier@@3PADA 00417058     Main.obj
+ 0003:0000005c       ?_bRemoveLineDirective@@3_NA 0041705c     Main.obj
+ 0003:00000060       ?ctErrors@@3HA             00417060     Main.obj
+ 0003:00000068       ?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA 00417068     Main.obj
+ 0003:00000070       ?yychar@@3HA               00417070     Parser.obj
+ 0003:00000074       ?yynerrs@@3HA              00417074     Parser.obj
+ 0003:00000078       ?yylval@@3USType@@A        00417078     Parser.obj
+ 0003:00000b18       ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@4_KA 00417b18     Parser.obj
+ 0003:00000b54       ?yyleng@@3HA               00417b54     Scanner.obj
+ 0003:00000b58       ?yyin@@3PAU_iobuf@@A       00417b58     Scanner.obj
+ 0003:00000b5c       ?yyout@@3PAU_iobuf@@A      00417b5c     Scanner.obj
+ 0003:00000b60       ?_strCppBlock@@3PADA       00417b60     Scanner.obj
+ 0003:00000b64       ?yytext@@3PADA             00417b64     Scanner.obj
+ 0003:00000ea4       ___scrt_current_native_startup_state 00417ea4     MSVCRT:utility.obj
+ 0003:00000ea8       ___scrt_native_startup_lock 00417ea8     MSVCRT:utility.obj
+ 0003:00000ec8       ?__type_info_root_node@@3U__type_info_node@@A 00417ec8     MSVCRT:tncleanup.obj
+ 0003:00000ed0       ___scrt_debugger_hook_flag 00417ed0     MSVCRT:utility_desktop.obj
+ 0003:00000ed4       ___isa_available           00417ed4     MSVCRT:_cpu_disp_.obj
+ 0003:00000ed8       ___favor                   00417ed8     MSVCRT:_cpu_disp_.obj
+ 0003:00000edc       ___dyn_tls_dtor_callback   00417edc     <common>
+ 0003:00000ee0       ___dyn_tls_init_callback   00417ee0     <common>
+
+ entry point at        0001:0000c31e
+
+ Static symbols
+
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     vcruntime:VCRUNTIME140.dll
+ 0000:fffe4000       .debug$S                   00400000     vcruntime:VCRUNTIME140.dll
+ 0000:fffe4000       .debug$S                   00400000     vcruntime:VCRUNTIME140.dll
+ 0000:fffe4000       .debug$S                   00400000     vcruntime:VCRUNTIME140.dll
+ 0000:fffe4000       .debug$S                   00400000     vcruntime:VCRUNTIME140.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     kernel32:KERNEL32.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-locale-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0000:fffe4000       .debug$S                   00400000     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0001:00000000       ??__Eyylval@@YAXXZ         00401000 f   Parser.obj
+ 0001:00000b00       ?PrintHeader@@YAXPAU_iobuf@@@Z 00401b00 f   Main.obj
+ 0001:00005d30       $LN524                     00406d30     Parser.obj
+ 0001:00005fc8       $LN373                     00406fc8     Parser.obj
+ 0001:00006460       ?__yy_memcpy@@YAXPAD0H@Z   00407460 f   Parser.obj
+ 0001:0000b7b0       $LN1086                    0040c7b0     Scanner.obj
+ 0001:0000b920       ?yy_fatal_error@@YAXQBD@Z  0040c920 f   Scanner.obj
+ 0001:0000b950       ?yy_flex_alloc@@YAPAXI@Z   0040c950 f   Scanner.obj
+ 0001:0000b960       ?yy_flex_free@@YAXPAX@Z    0040c960 f   Scanner.obj
+ 0001:0000b970       ?yy_flex_realloc@@YAPAXPAXI@Z 0040c970 f   Scanner.obj
+ 0001:0000b980       ?yy_get_next_buffer@@YAHXZ 0040c980 f   Scanner.obj
+ 0001:0000bbb0       ?yy_get_previous_state@@YAHXZ 0040cbb0 f   Scanner.obj
+ 0001:0000bc80       ?yy_try_NUL_trans@@YAHH@Z  0040cc80 f   Scanner.obj
+ 0001:0000bd30       $$000000                   0040cd30     MSVCRT:chkstk.obj
+ 0001:0000c080       $$000000                   0040d080     MSVCRT:alloca16.obj
+ 0001:0000c0ac       ?pre_c_initialization@@YAHXZ 0040d0ac f   MSVCRT:exe_main.obj
+ 0001:0000c150       ?post_pgo_initialization@@YAHXZ 0040d150 f   MSVCRT:exe_main.obj
+ 0001:0000c158       ?pre_cpp_initialization@@YAXXZ 0040d158 f   MSVCRT:exe_main.obj
+ 0001:0000c16a       ?__scrt_common_main@@YAHXZ 0040d16a f   MSVCRT:exe_main.obj
+ 0001:0000c174       ?__scrt_common_main_seh@@YAHXZ 0040d174 f   MSVCRT:exe_main.obj
+ 0001:0000c2f4       ?initialize_environment@@YAXXZ 0040d2f4 f   MSVCRT:exe_main.obj
+ 0001:0000c2f9       ?invoke_main@@YAHXZ        0040d2f9 f   MSVCRT:exe_main.obj
+ 0001:0000c366       ?find_pe_section@@YAPAU_IMAGE_SECTION_HEADER@@QAEI@Z 0040d366 f   MSVCRT:utility.obj
+ 0001:0000c3aa       ?is_potentially_valid_image_base@@YA_NQAX@Z 0040d3aa f   MSVCRT:utility.obj
+ 0001:0000ca70       $$000000                   0040da70     MSVCRT:_sehprolg4_.obj
+ 0002:00000144       ?pre_cpp_initializer@@3P6AXXZA 0040e144     MSVCRT:exe_main.obj
+ 0002:00000148       ?yylval$initializer$@@3P6AXXZA 0040e148     Parser.obj
+ 0002:00000154       ?pre_c_initializer@@3P6AHXZA 0040e154     MSVCRT:exe_main.obj
+ 0002:00000158       ?post_pgo_initializer@@3P6AHXZA 0040e158     MSVCRT:exe_main.obj
+ 0002:00000430       ?yytranslate@@3QBDB        0040e430     Parser.obj
+ 0002:00000580       ?yyr1@@3QBFB               0040e580     Parser.obj
+ 0002:000007e0       ?yyr2@@3QBFB               0040e7e0     Parser.obj
+ 0002:00000a40       ?yydefact@@3QBFB           0040ea40     Parser.obj
+ 0002:00000e18       ?yydefgoto@@3QBFB          0040ee18     Parser.obj
+ 0002:00000ef0       ?yypact@@3QBFB             0040eef0     Parser.obj
+ 0002:000012c8       ?yypgoto@@3QBFB            0040f2c8     Parser.obj
+ 0002:000013a0       ?yytable@@3QBFB            0040f3a0     Parser.obj
+ 0002:00002e28       ?yycheck@@3QBFB            00410e28     Parser.obj
+ 0002:00006258       ?yy_accept@@3QBFB          00414258     Scanner.obj
+ 0002:00006598       ?yy_ec@@3QBHB              00414598     Scanner.obj
+ 0002:00006998       ?yy_meta@@3QBHB            00414998     Scanner.obj
+ 0002:00006ad0       ?yy_base@@3QBFB            00414ad0     Scanner.obj
+ 0002:00006e20       ?yy_def@@3QBFB             00414e20     Scanner.obj
+ 0002:00007170       ?yy_nxt@@3QBFB             00415170     Scanner.obj
+ 0002:00007610       ?yy_chk@@3QBFB             00415610     Scanner.obj
+ 0002:00007c54       _GS_ExceptionPointers      00415c54     MSVCRT:gs_report.obj
+ 0002:00008038       __sehtable$?__scrt_common_main_seh@@YAHXZ 00416038     MSVCRT:exe_main.obj
+ 0002:00008058       __sehtable$___scrt_is_nonwritable_in_current_image 00416058     MSVCRT:utility.obj
+ 0002:000082e4       .idata$6                   004162e4     vcruntime:VCRUNTIME140.dll
+ 0002:00008614       .idata$6                   00416614     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00008634       .idata$6                   00416634     ucrt:api-ms-win-crt-filesystem-l1-1-0.dll
+ 0002:0000865a       .idata$6                   0041665a     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:0000867a       .idata$6                   0041667a     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:0000869c       .idata$6                   0041669c     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:000086be       .idata$6                   004166be     ucrt:api-ms-win-crt-convert-l1-1-0.dll
+ 0002:000086e0       .idata$6                   004166e0     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:00008700       .idata$6                   00416700     ucrt:api-ms-win-crt-locale-l1-1-0.dll
+ 0002:00008850       .idata$6                   00416850     kernel32:KERNEL32.dll
+ 0003:00000008       ?yy_init@@3HA              00417008     Scanner.obj
+ 0003:00000084       ?_strCurrentClass@@3PBDB   00417084     Parser.obj
+ 0003:00000088       ?_iCurrentClassID@@3HA     00417088     Parser.obj
+ 0003:0000008c       ?_strCurrentBase@@3PBDB    0041708c     Parser.obj
+ 0003:00000090       ?_strCurrentDescription@@3PBDB 00417090     Parser.obj
+ 0003:00000094       ?_strCurrentThumbnail@@3PBDB 00417094     Parser.obj
+ 0003:00000098       ?_strCurrentEnum@@3PBDB    00417098     Parser.obj
+ 0003:0000009c       ?_bClassIsExported@@3HA    0041709c     Parser.obj
+ 0003:000000a0       ?_strCurrentPropertyID@@3PBDB 004170a0     Parser.obj
+ 0003:000000a4       ?_strCurrentPropertyIdentifier@@3PBDB 004170a4     Parser.obj
+ 0003:000000a8       ?_strCurrentPropertyPropertyType@@3PBDB 004170a8     Parser.obj
+ 0003:000000ac       ?_strCurrentPropertyEnumType@@3PBDB 004170ac     Parser.obj
+ 0003:000000b0       ?_strCurrentPropertyDataType@@3PBDB 004170b0     Parser.obj
+ 0003:000000b4       ?_strCurrentPropertyName@@3PBDB 004170b4     Parser.obj
+ 0003:000000b8       ?_strCurrentPropertyShortcut@@3PBDB 004170b8     Parser.obj
+ 0003:000000bc       ?_strCurrentPropertyColor@@3PBDB 004170bc     Parser.obj
+ 0003:000000c0       ?_strCurrentPropertyFlags@@3PBDB 004170c0     Parser.obj
+ 0003:000000c4       ?_strCurrentPropertyDefaultCode@@3PBDB 004170c4     Parser.obj
+ 0003:000000c8       ?_strCurrentComponentIdentifier@@3PBDB 004170c8     Parser.obj
+ 0003:000000cc       ?_strCurrentComponentType@@3PBDB 004170cc     Parser.obj
+ 0003:000000d0       ?_strCurrentComponentID@@3PBDB 004170d0     Parser.obj
+ 0003:000000d4       ?_strCurrentComponentFileName@@3PBDB 004170d4     Parser.obj
+ 0003:000000d8       ?_ctInProcedureHandler@@3HA 004170d8     Parser.obj
+ 0003:000000dc       ?_bInProcedure@@3HA        004170dc     Parser.obj
+ 0003:000000e0       ?_strLastProcedureName@@3PADA 004170e0     Parser.obj
+ 0003:000001e0       ?_strInWaitName@@3PADA     004171e0     Parser.obj
+ 0003:000002e0       ?_strAfterWaitName@@3PADA  004172e0     Parser.obj
+ 0003:000003e0       ?_strInWaitID@@3PADA       004173e0     Parser.obj
+ 0003:000004e0       ?_strAfterWaitID@@3PADA    004174e0     Parser.obj
+ 0003:000005e0       ?_strInLoopName@@3PADA     004175e0     Parser.obj
+ 0003:000006e0       ?_strAfterLoopName@@3PADA  004176e0     Parser.obj
+ 0003:000007e0       ?_strInLoopID@@3PADA       004177e0     Parser.obj
+ 0003:000008e0       ?_strAfterLoopID@@3PADA    004178e0     Parser.obj
+ 0003:000009e0       ?_strCurrentStateID@@3PADA 004179e0     Parser.obj
+ 0003:00000ae0       ?_bInHandler@@3HA          00417ae0     Parser.obj
+ 0003:00000ae4       ?_bHasOtherwise@@3HA       00417ae4     Parser.obj
+ 0003:00000ae8       ?_strCurrentEvent@@3PBDB   00417ae8     Parser.obj
+ 0003:00000aec       ?_bFeature_AbstractBaseClass@@3HA 00417aec     Parser.obj
+ 0003:00000af0       ?_bFeature_ImplementsOnInitClass@@3HA 00417af0     Parser.obj
+ 0003:00000af4       ?_bFeature_ImplementsOnEndClass@@3HA 00417af4     Parser.obj
+ 0003:00000af8       ?_bFeature_ImplementsOnPrecache@@3HA 00417af8     Parser.obj
+ 0003:00000afc       ?_bFeature_ImplementsOnWorldInit@@3HA 00417afc     Parser.obj
+ 0003:00000b00       ?_bFeature_ImplementsOnWorldEnd@@3HA 00417b00     Parser.obj
+ 0003:00000b04       ?_bFeature_ImplementsOnWorldTick@@3HA 00417b04     Parser.obj
+ 0003:00000b08       ?_bFeature_ImplementsOnWorldRender@@3HA 00417b08     Parser.obj
+ 0003:00000b0c       ?_bFeature_CanBePredictable@@3HA 00417b0c     Parser.obj
+ 0003:00000b10       ?_iNextFreeID@@3HA         00417b10     Parser.obj
+ 0003:00000b14       ?_ctBraces@@3HA            00417b14     Parser.obj
+ 0003:00000b20       ?strBraces@?1??Braces@@YA?AUSType@@H@Z@4PADA 00417b20     Parser.obj
+ 0003:00000b68       ?yy_current_buffer@@3PAUyy_buffer_state@@A 00417b68     Scanner.obj
+ 0003:00000b6c       ?yy_hold_char@@3DA         00417b6c     Scanner.obj
+ 0003:00000b70       ?yy_n_chars@@3HA           00417b70     Scanner.obj
+ 0003:00000b74       ?yy_c_buf_p@@3PADA         00417b74     Scanner.obj
+ 0003:00000b78       ?yy_start@@3HA             00417b78     Scanner.obj
+ 0003:00000b7c       ?yy_did_buffer_switch_on_eof@@3HA 00417b7c     Scanner.obj
+ 0003:00000b80       ?yy_last_accepting_state@@3HA 00417b80     Scanner.obj
+ 0003:00000b84       ?yy_last_accepting_cpos@@3PADA 00417b84     Scanner.obj
+ 0003:00000b88       _GS_ExceptionRecord        00417b88     MSVCRT:gs_report.obj
+ 0003:00000bd8       _GS_ContextRecord          00417bd8     MSVCRT:gs_report.obj
+ 0003:00000eac       ?module_local_atexit_table@@3U_onexit_table_t@@A 00417eac     MSVCRT:utility.obj
+ 0003:00000eb8       ?module_local_at_quick_exit_table@@3U_onexit_table_t@@A 00417eb8     MSVCRT:utility.obj
+ 0003:00000ec4       ?is_initialized_as_dll@@3_NA 00417ec4     MSVCRT:utility.obj
+ 0004:00000000       __guard_fids__             00418000     MSVCRT:exe_main.obj
+ 0004:00000004       __guard_fids__             00418004     MSVCRT:exe_main.obj
+ 0004:00000008       __guard_fids__             00418008     MSVCRT:exe_main.obj
+ 0004:0000000c       __guard_fids_?pre_c_initialization@@YAHXZ 0041800c     MSVCRT:exe_main.obj
+ 0004:00000014       __guard_fids____scrt_set_unhandled_exception_filter 00418014     MSVCRT:utility_desktop.obj
+ 0004:00000018       __guard_fids___except_handler4 00418018     MSVCRT:_chandler4gs_.obj
+ 0004:0000001c       __guard_fids__             0041801c     MSVCRT:guard_support.obj
+ 0004:00000020       __guard_fids___guard_icall_checks_enforced 00418020     MSVCRT:guard_support.obj
+ 0005:00000060       $R000000                   00419060     * linker generated manifest res *
