@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: YOUR_NAME <YOUR_EMAIL>
 Build-Depends: debhelper-compat (= 13), cmake, flex, bison, nasm, libsdl2-dev, libvorbis-dev, zlib1g-dev
 Standards-Version: 4.6.0
-Homepage: https://github.com/tx00100xt/PlusPlus
+Homepage: https://github.com/tx00100xt/SE1-TFE-Tower
 Vcs-Browser: https://salsa.debian.org/debian/serioussam-tower
 Vcs-Git: https://salsa.debian.org/debian/serioussam-tower.git
 Rules-Requires-Root: no

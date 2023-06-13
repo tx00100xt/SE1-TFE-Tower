@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: serioussam-tower
 Upstream-Contact: YOUR_NAME <YOUR_EMAIL>
-Source: https://github.com/tx00100xt/SE1-TFE-PlusPlus
+Source: https://github.com/tx00100xt/SE1-TFE-Tower
 
 Files: *
 Copyright: 2002-2012 Croteam Ltd. 
