@@ -2,6 +2,7 @@
 ![Build status](https://github.com/tx00100xt/SE1-TFE-Tower/actions/workflows/cibuild.yml/badge.svg)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/tx00100xt/SE1-TFE-Tower)
+[![Github downloads](https://img.shields.io/github/downloads/tx00100xt/SE1-TFE-Tower/total.svg?logo=github&logoColor=white&style=flat-square&color=E75776)]()
 
 What is Nightmare Tower?  
 This is a modification for Serious Sam Classic The First Encounter.  
