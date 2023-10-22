@@ -170,6 +170,12 @@ static FLOAT gam_fChatSoundVolume = 0.25f;
 BOOL map_bIsFirstEncounter = FALSE;
 BOOL _bUserBreakEnabled = FALSE;
 
+// Fix illuminations bug metod
+// 0 - none
+// 1 - fix textrure settings
+// 2 - create additional lighting (better) 
+INDEX gam_bFixIlluminationsMetod = 2;
+
 // make sure that console doesn't show last lines if not playing in network
 void MaybeDiscardLastLines(void)
 {
@@ -1048,6 +1054,12 @@ void CGame::InitInternal( void)
   _pShell->DeclareSymbol("user void StopSound(INDEX);", (void *)&StopScriptSound);
   _pShell->DeclareSymbol("user INDEX IsSoundPlaying(INDEX);", (void *)&IsScriptSoundPlaying);
 
+  // Fix illuminations bug metod:
+  // 0 - none
+  // 1 - fix textrure settings fix
+  // 2 - create additional lighting (better) 
+  _pShell->DeclareSymbol("persistent user INDEX gam_bFixIlluminationsMetod;", (void *)&gam_bFixIlluminationsMetod);
+
   CAM_Init();
 
   // load persistent symbols
@@ -1058,9 +1070,9 @@ void CGame::InitInternal( void)
   _pShell->Execute(CTString("include \"")+fnmStartupScript+"\";");
 
   // check the size and pointer of player control variables that are local to each player
-  if (ctl_slPlayerControlsSize<=0
-    ||ctl_slPlayerControlsSize>sizeof(((CLocalPlayer*)NULL)->lp_ubPlayerControlsState)
-    ||ctl_pvPlayerControls==NULL) {
+  if (ctl_slPlayerControlsSize <= 0
+    || static_cast<ULONG>(ctl_slPlayerControlsSize) > sizeof(((CLocalPlayer*)NULL)->lp_ubPlayerControlsState)
+    || ctl_pvPlayerControls == NULL) {
     FatalError(TRANS("Current player controls are invalid."));
   }
 
@@ -1488,6 +1500,7 @@ SLONG CGame::PackHighScoreTable(void)
   UBYTE *pub = _aubHighScoreBuffer;
   // for each entry
   for (INDEX i=0; i<HIGHSCORE_COUNT; i++) {
+#ifdef PLATFORM_UNIX
     // make its string
     char str[MAX_HIGHSCORENAME+1];
     memset(str, 0, sizeof(str));
@@ -1518,6 +1531,23 @@ SLONG CGame::PackHighScoreTable(void)
     BYTESWAP(ival);
     memcpy(pub, &ival,      sizeof(INDEX));
     pub += sizeof(INDEX);
+#else
+	// make its string
+	char str[MAX_HIGHSCORENAME + 1];
+	memset(str, 0, sizeof(str));
+	strncpy(str, gm_ahseHighScores[i].hse_strPlayer, MAX_HIGHSCORENAME);
+	// copy the value and the string
+	memcpy(pub, str, sizeof(str));
+	pub += MAX_HIGHSCORENAME + 1;
+	memcpy(pub, &gm_ahseHighScores[i].hse_gdDifficulty, sizeof(INDEX));
+	pub += sizeof(INDEX);
+	memcpy(pub, &gm_ahseHighScores[i].hse_tmTime, sizeof(FLOAT));
+	pub += sizeof(FLOAT);
+	memcpy(pub, &gm_ahseHighScores[i].hse_ctKills, sizeof(INDEX));
+	pub += sizeof(INDEX);
+	memcpy(pub, &gm_ahseHighScores[i].hse_ctScore, sizeof(INDEX));
+	pub += sizeof(INDEX);
+#endif
   }
   // just copy it for now
   memcpy(_aubHighScorePacked, _aubHighScoreBuffer, MAX_HIGHSCORETABLESIZE);
@@ -1532,6 +1562,7 @@ void CGame::UnpackHighScoreTable(SLONG slSize)
   UBYTE *pub = _aubHighScoreBuffer;
   // for each entry
   for (INDEX i=0; i<HIGHSCORE_COUNT; i++) {
+#ifdef PLATFORM_UNIX
     gm_ahseHighScores[i].hse_strPlayer = (const char*)pub;
     pub += MAX_HIGHSCORENAME+1;
     memcpy(&gm_ahseHighScores[i].hse_gdDifficulty, pub, sizeof(INDEX));
@@ -1546,6 +1577,18 @@ void CGame::UnpackHighScoreTable(SLONG slSize)
     memcpy(&gm_ahseHighScores[i].hse_ctScore     , pub, sizeof(INDEX));
     BYTESWAP(gm_ahseHighScores[i].hse_ctScore);
     pub += sizeof(INDEX);
+#else
+	gm_ahseHighScores[i].hse_strPlayer = (const char*)pub;
+	pub += MAX_HIGHSCORENAME + 1;
+	memcpy(&gm_ahseHighScores[i].hse_gdDifficulty, pub, sizeof(INDEX));
+	pub += sizeof(INDEX);
+	memcpy(&gm_ahseHighScores[i].hse_tmTime, pub, sizeof(FLOAT));
+	pub += sizeof(FLOAT);
+	memcpy(&gm_ahseHighScores[i].hse_ctKills, pub, sizeof(INDEX));
+	pub += sizeof(INDEX);
+	memcpy(&gm_ahseHighScores[i].hse_ctScore, pub, sizeof(INDEX));
+	pub += sizeof(INDEX);
+#endif
   }
 
   // try to
@@ -1908,7 +1951,9 @@ static void PrintStats( CDrawPort *pdpDrawPort)
     // display nothing
     _iCheckNow = 0;
     _iCheckMax = 0;
+#ifdef PLATFORM_UNIX
     STAT_Enable(FALSE);
+#endif
     return;
   }
 
@@ -1956,7 +2001,9 @@ static void PrintStats( CDrawPort *pdpDrawPort)
   if( hud_iStats==2 && hud_iEnableStats)
   { // display extensive statistics
     CTString strReport;
-    STAT_Enable(TRUE);
+#ifdef PLATFORM_UNIX
+	STAT_Enable(TRUE);
+#endif
     STAT_Report(strReport);
     STAT_Reset();
 
@@ -1972,7 +2019,11 @@ static void PrintStats( CDrawPort *pdpDrawPort)
     pdpDrawPort->PutText( strFPS,    0, 40, C_WHITE|CT_OPAQUE);
     pdpDrawPort->PutText( strReport, 4, 65, C_GREEN|CT_OPAQUE);
   }
-  else STAT_Enable(FALSE);
+  else {
+#ifdef PLATFORM_UNIX
+	  STAT_Enable(FALSE);
+#endif 
+  }
 }
 
 
@@ -2243,7 +2294,7 @@ void CGame::GameRedrawView( CDrawPort *pdpDrawPort, ULONG ulFlags)
     // timer must not occur during prescanning
     { 
 #if defined(PLATFORM_UNIX) && !defined(SINGLE_THREADED)
-      #warning "This seems to cause Race Condition, so disabled"
+      //#warning "This seems to cause Race Condition, so disabled"
 #else
       CTSingleLock csTimer(&_pTimer->tm_csHooks, TRUE);
 #endif
@@ -2660,6 +2711,11 @@ INDEX FixQuicksaveDir(const CTFileName &fnmDir, INDEX ctMax)
   }
 
   // sort the list
+#ifdef _MSC_VER
+#ifndef _offsetof
+#define _offsetof offsetof
+#endif
+#endif
   lh.Sort(qsort_CompareQuickSaves_FileUp, _offsetof(QuickSave, qs_lnNode));
   INDEX ctCount = lh.Count();
 
@@ -2853,35 +2909,6 @@ void TiledTextureSE( PIXaabbox2D &_boxScreen, FLOAT fStretch, const MEX2D &vScre
 
 void CGame::LCDInit(void)
 {
-  try {
-    _toBcgClouds.SetData_t(CTFILENAME("Textures\\General\\Background6.tex"));
-#ifdef FIRST_ENCOUNTER
-    _toPointer.SetData_t(CTFILENAME("Textures\\General\\Pointer.tex"));
-    _toBcgGrid.SetData_t(CTFILENAME("Textures\\General\\Grid16x16-dot.tex"));
-#else
-    _toPointer.SetData_t(CTFILENAME("TexturesMP\\General\\Pointer.tex"));
-    _toBcgGrid.SetData_t(CTFILENAME("TexturesMP\\General\\grid.tex"));
-    _toBackdrop.SetData_t(CTFILENAME("TexturesMP\\General\\MenuBack.tex"));
-    // thoses are not in original TFE datas and must be added externaly (with SE1_10.gro or a minimal versio of it)
-    _toSamU.SetData_t(CTFILENAME("TexturesMP\\General\\SamU.tex"));
-    _toSamD.SetData_t(CTFILENAME("TexturesMP\\General\\SamD.tex"));
-    _toLeftU.SetData_t(CTFILENAME("TexturesMP\\General\\LeftU.tex"));
-    _toLeftD.SetData_t(CTFILENAME("TexturesMP\\General\\LeftD.tex"));
-    // force constant textures
-    ((CTextureData*)_toBackdrop .GetData())->Force(TEX_CONSTANT);
-    ((CTextureData*)_toSamU     .GetData())->Force(TEX_CONSTANT);
-    ((CTextureData*)_toSamD     .GetData())->Force(TEX_CONSTANT);
-    ((CTextureData*)_toLeftU    .GetData())->Force(TEX_CONSTANT);
-    ((CTextureData*)_toLeftD    .GetData())->Force(TEX_CONSTANT);
-#endif
-    ((CTextureData*)_toBcgClouds.GetData())->Force(TEX_CONSTANT);
-    ((CTextureData*)_toPointer  .GetData())->Force(TEX_CONSTANT);
-    ((CTextureData*)_toBcgGrid  .GetData())->Force(TEX_CONSTANT);
-
-
-  } catch (const char *strError) {
-    FatalError("%s\n", strError);
-  }
   ::_LCDInit();
 }
 void CGame::LCDEnd(void)
@@ -2890,25 +2917,10 @@ void CGame::LCDEnd(void)
 }
 void CGame::LCDPrepare(FLOAT fFade)
 {
-  // get current time and alpha value
-  _tmNow_SE = (FLOAT)_pTimer->GetHighPrecisionTimer().GetSeconds();
-  _ulA_SE   = NormFloatToByte(fFade);
-
   ::_LCDPrepare(fFade);
 }
 void CGame::LCDSetDrawport(CDrawPort *pdp)
 {
-  _pdp_SE = pdp;
-  _pixSizeI_SE = _pdp_SE->GetWidth();
-  _pixSizeJ_SE = _pdp_SE->GetHeight();
-  _boxScreen_SE = PIXaabbox2D ( PIX2D(0,0), PIX2D(_pixSizeI_SE, _pixSizeJ_SE));
-    
-  if (pdp->dp_SizeIOverRasterSizeI==1.0f) {
-    _bPopup = FALSE;
-  } else {
-    _bPopup = TRUE;
-  }
-  
   ::_LCDSetDrawport(pdp);
 }
 void CGame::LCDDrawBox(PIX pixUL, PIX pixDR, const PIXaabbox2D &box, COLOR col)
@@ -2955,8 +2967,9 @@ void CGame::LCDRenderClouds1(void)
 {
 
   #ifdef FIRST_ENCOUNTER 
-  LCDRenderCloudsForComp();
-  LCDRenderCompGrid();
+  //LCDRenderCloudsForComp();
+  //LCDRenderCompGrid();
+  ::_LCDRenderClouds1();
   #else
   _pdp_SE->PutTexture(&_toBackdrop, _boxScreen_SE, C_WHITE|255);
 
@@ -3036,42 +3049,15 @@ void CGame::LCDRenderCloudsForComp(void)
 }
 void CGame::LCDRenderClouds2(void)
 {
-  NOTHING;
+  ::_LCDRenderClouds2();
 }
 void CGame::LCDRenderGrid(void)
 {
-  NOTHING;
-}
-void CGame::LCDRenderCompGrid(void)
-{
-   MEXaabbox2D boxBcgGrid;
-   TiledTextureSE(_boxScreen_SE, 0.5f*_pdp_SE->GetWidth()/(_pdp_SE->dp_SizeIOverRasterSizeI*640.0f), MEX2D(0,0), boxBcgGrid);
-    #ifdef FIRST_ENCOUNTER  // First Encounter
-   _pdp_SE->PutTexture(&_toBcgGrid, _boxScreen_SE, boxBcgGrid, SE_COL_GREEN_NEUTRAL|_ulA_SE>>1); 
-    #else // Second Encounter
-   _pdp_SE->PutTexture(&_toBcgGrid, _boxScreen_SE, boxBcgGrid, SE_COL_BLUE_NEUTRAL|_ulA_SE>>1); 
-    #endif
+  ::_LCDRenderGrid();
 }
 void CGame::LCDDrawPointer(PIX pixI, PIX pixJ)
 {
-  CDisplayMode dmCurrent;
-  _pGfx->GetCurrentDisplayMode(dmCurrent);
-  if (dmCurrent.IsFullScreen()) {
-    while (ShowCursor(FALSE) >= 0);
-  } else {
-    if (!_pInput->IsInputEnabled()) {
-      while (ShowCursor(TRUE) < 0);
-    }
-    return;
-  }
-  PIX pixSizeI = _toPointer.GetWidth();
-  PIX pixSizeJ = _toPointer.GetHeight();
-  pixI-=1;
-  pixJ-=1;
-  _pdp_SE->PutTexture( &_toPointer, PIXaabbox2D( PIX2D(pixI, pixJ), PIX2D(pixI+pixSizeI, pixJ+pixSizeJ)),
-                    LCDFadedColor(C_WHITE|255));
-
-  //::_LCDDrawPointer(pixI, pixJ);
+  ::_LCDDrawPointer(pixI, pixJ);
 }
 COLOR CGame::LCDGetColor(COLOR colDefault, const char *strName)
 {

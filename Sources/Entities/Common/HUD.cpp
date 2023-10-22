@@ -16,8 +16,8 @@
 #define TOP_HEALTH 100
 
 #ifdef PLATFORM_UNIX
-extern "C" __attribute__ ((visibility("default"))) FLOAT _fArmorHeightAdjuster = 1.0f;
-extern "C" __attribute__ ((visibility("default"))) FLOAT _fFragScorerHeightAdjuster = 1.0f;
+extern "C" __attribute__ ((visibility("default"))) FLOAT _fArmorHeightAdjuster;
+extern "C" __attribute__ ((visibility("default"))) FLOAT _fFragScorerHeightAdjuster;
 #else
 extern __declspec(dllimport) FLOAT _fArmorHeightAdjuster;
 extern __declspec(dllimport) FLOAT _fFragScorerHeightAdjuster;
@@ -26,6 +26,7 @@ extern __declspec(dllimport) FLOAT _fFragScorerHeightAdjuster;
 //
 extern INDEX hud_bShowPing;
 extern INDEX hud_bShowKills;
+extern INDEX hud_bShowScore;
 
 // cheats
 extern INDEX cht_bEnable;
@@ -44,6 +45,7 @@ extern INDEX hud_iSortPlayers;
 extern FLOAT hud_fOpacity;
 extern FLOAT hud_fScaling;
 extern FLOAT hud_tmWeaponsOnScreen;
+extern INDEX hud_bWeaponsIconScale; // HUD weapons icons scale: 0 - small, 1 - big
 
 
 // player statistics sorting keys
@@ -815,7 +817,11 @@ extern void DrawHUD( const CPlayer *penPlayerCurrent, CDrawPort *pdpCurrent, BOO
       if( ptoWantedWeapon == _awiWeapons[i].wi_ptoWeapon) colIcon = C_WHITE;
       _fCustomScalingAdjustment = 1.0f;
       HUD_DrawBorder( fCol, fRow, fOneUnit, fOneUnit, colIcon);
-      _fCustomScalingAdjustment = 0.5f;
+      if (hud_bWeaponsIconScale) {
+        _fCustomScalingAdjustment = 0.75f;
+      } else {
+        _fCustomScalingAdjustment = 0.5f;
+      }
       HUD_DrawIcon(   fCol, fRow, *_awiWeapons[i].wi_ptoWeapon, colIcon, 1.0f, FALSE);
       // advance to next position
       fCol += fAdvUnit;
@@ -1047,15 +1053,17 @@ extern void DrawHUD( const CPlayer *penPlayerCurrent, CDrawPort *pdpCurrent, BOO
     iScore = iScoreSum;
   }
 
-  // prepare and draw score or frags info 
-  strValue.PrintF( "%d", iScore);
-  fRow = pixTopBound  +fHalfUnit;
-  fCol = pixLeftBound +fHalfUnit;
-  fAdv = fAdvUnit+ fChrUnit*fWidthAdj/2 -fHalfUnit;
-  HUD_DrawBorder( fCol,      fRow, fOneUnit,           fOneUnit, colBorder);
-  HUD_DrawBorder( fCol+fAdv, fRow, fChrUnit*fWidthAdj, fOneUnit, colBorder);
-  HUD_DrawText(   fCol+fAdv, fRow, strValue, colScore, 1.0f);
-  HUD_DrawIcon(   fCol,      fRow, _toFrags, colScore, 1.0f, FALSE);
+  if( hud_bShowScore ) {
+    // prepare and draw score or frags info 
+    strValue.PrintF( "%d", iScore);
+    fRow = pixTopBound  +fHalfUnit;
+    fCol = pixLeftBound +fHalfUnit;
+    fAdv = fAdvUnit+ fChrUnit*fWidthAdj/2 -fHalfUnit;
+    HUD_DrawBorder( fCol,      fRow, fOneUnit,           fOneUnit, colBorder);
+    HUD_DrawBorder( fCol+fAdv, fRow, fChrUnit*fWidthAdj, fOneUnit, colBorder);
+    HUD_DrawText(   fCol+fAdv, fRow, strValue, colScore, 1.0f);
+    HUD_DrawIcon(   fCol,      fRow, _toFrags, colScore, 1.0f, FALSE);
+  }
 
   // eventually draw mana info 
   if( bScoreMatch || bFragMatch) {
@@ -1070,7 +1078,7 @@ extern void DrawHUD( const CPlayer *penPlayerCurrent, CDrawPort *pdpCurrent, BOO
   }
 
   // if single player or cooperative mode
-  if( bSinglePlay || bCooperative)
+  if( (bSinglePlay || bCooperative) && hud_bShowScore)
   {
     // prepare and draw hiscore info 
     strValue.PrintF( "%d", Max(_penPlayer->m_iHighScore, _penPlayer->m_psGameStats.ps_iScore));

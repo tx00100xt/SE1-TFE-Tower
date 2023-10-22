@@ -37,15 +37,16 @@
 #include "Entities/WorldSettingsController.h"
 
 #ifdef PLATFORM_UNIX
-extern "C" __attribute__ ((visibility("default"))) FLOAT _fWeaponFOVAdjuster = 1.0f;
-extern "C" __attribute__ ((visibility("default"))) FLOAT _fPlayerFOVAdjuster = 1.0f;
+extern "C" __attribute__ ((visibility("default"))) FLOAT _fWeaponFOVAdjuster;
+extern "C" __attribute__ ((visibility("default"))) FLOAT _fPlayerFOVAdjuster;
 #else
-extern __declspec(dllimport) FLOAT _fWeaponFOVAdjusterf;
+extern __declspec(dllimport) FLOAT _fWeaponFOVAdjuster;
 extern __declspec(dllimport) FLOAT _fPlayerFOVAdjuster;
 #endif
 
-extern INDEX hud_bShowPing				= TRUE;
-extern INDEX hud_bShowKills				= TRUE;
+INDEX hud_bShowPing = FALSE;
+INDEX hud_bShowKills = FALSE;
+INDEX hud_bShowScore = TRUE;
 
 extern void JumpFromBouncer(CEntity *penToBounce, CEntity *penBouncer);
 // from game
@@ -333,6 +334,7 @@ FLOAT hud_fOpacity     = 0.9f;
 FLOAT hud_fScaling     = 1.0f;
 FLOAT hud_tmWeaponsOnScreen = 3.0f;
 FLOAT hud_tmLatencySnapshot = 1.0f;
+INDEX hud_bWeaponsIconScale = 0; // HUD weapons icons scale: 0 - small, 1 - big
 
 FLOAT plr_fBreathingStrength = 0.0f;
 extern FLOAT plr_tmSnoopingTime;
@@ -625,6 +627,7 @@ void CPlayer_OnInitClass(void)
   // declare player control variables
   _pShell->DeclareSymbol("persistent user INDEX	hud_bShowPing;",	&hud_bShowPing);
   _pShell->DeclareSymbol("persistent user INDEX	hud_bShowKills;",	&hud_bShowKills);
+  _pShell->DeclareSymbol("persistent user INDEX	hud_bShowScore;",	&hud_bShowScore);
 
   _pShell->DeclareSymbol("user INDEX ctl_bMoveForward;",  &pctlCurrent.bMoveForward);
   _pShell->DeclareSymbol("user INDEX ctl_bMoveBackward;", &pctlCurrent.bMoveBackward);
@@ -694,6 +697,7 @@ void CPlayer_OnInitClass(void)
   _pShell->DeclareSymbol("INDEX cht_bDumpFinalBossData;", &cht_bDumpFinalBossData);
   _pShell->DeclareSymbol("INDEX cht_bDebugFinalBossAnimations;", &cht_bDebugFinalBossAnimations);
   _pShell->DeclareSymbol("INDEX cht_bDumpPlayerShading;", &cht_bDumpPlayerShading);
+  _pShell->DeclareSymbol("persistent user INDEX hud_bWeaponsIconScale;", (void *) &hud_bWeaponsIconScale);
 
   _pShell->DeclareSymbol("persistent user FLOAT wpn_fRecoilSpeed[17];",   &wpn_fRecoilSpeed);
   _pShell->DeclareSymbol("persistent user FLOAT wpn_fRecoilLimit[17];",   &wpn_fRecoilLimit);
